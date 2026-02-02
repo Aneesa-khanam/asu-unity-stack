@@ -152,7 +152,7 @@ GetTickets.args = {
       id: "lacrosse",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -170,7 +170,7 @@ GetTickets.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "omen's Basketball",
       icon: "fas fa-basketball-ball",
       id: "w-basketball",
     },
@@ -306,7 +306,7 @@ GetTicketsUpcomingGames.args = {
       active: true,
     },
     {
-      name: "M. Basketball",
+      name: "en's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -324,7 +324,7 @@ GetTicketsUpcomingGames.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
       id: "w-basketball",
     },
@@ -432,7 +432,7 @@ GetTicketsOverlapFirstRow.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -450,7 +450,7 @@ GetTicketsOverlapFirstRow.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: " Basketball",
       icon: "fas fa-basketball-ball",
       id: "w-basketball",
     },
@@ -551,7 +551,7 @@ GetTicketsOverlapWithSportTabs.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -569,7 +569,7 @@ GetTicketsOverlapWithSportTabs.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
       id: "w-basketball",
     },
@@ -689,7 +689,7 @@ GetTicketsLight.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -707,7 +707,7 @@ GetTicketsLight.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
       id: "w-basketball",
     },
@@ -838,7 +838,7 @@ GetTicketsLightSidebar.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -856,7 +856,7 @@ GetTicketsLightSidebar.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
       id: "w-basketball",
     },
@@ -977,7 +977,7 @@ GetTicketsSportTabsOnly.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -995,7 +995,7 @@ GetTicketsSportTabsOnly.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
       id: "w-basketball",
     },

@@ -112,17 +112,17 @@ function updateSportName(sportName) {
       sportName === "Men's Basketball" ||
       sportName === "M. Basketball"
     ) {
-      sportName = "M. Basketball";
+      sportName = "Men's Basketball";
     } else if (sportName === "Men's Golf" || sportName === "M. Golf") {
-      sportName = "M. Golf";
+      sportName = "Men's Golf";
     } else if (
       sportName === "M. Swim and Dive" ||
       sportName === "Men's Swimming and Diving" ||
       sportName === "Men's Swim & Diving"
     ) {
-      sportName = "M. Swimming and Diving";
+      sportName = "Men's Swimming and Diving";
     } else if (sportName === "Men's Tennis") {
-      sportName = "M. Tennis";
+      sportName = "Men's Tennis";
     } else if (sportName === "Soccer") {
       sportName = "Soccer";
     } else if (sportName === "Softball") {
@@ -140,16 +140,16 @@ function updateSportName(sportName) {
       sportName === "Women's Basketball" ||
       sportName === "W. Basketball"
     ) {
-      sportName = "W. Basketball";
+      sportName = "Women's Basketball";
     } else if (sportName === "Women's Golf") {
-      sportName = "W. Golf";
+      sportName = "Women's Golf";
     } else if (
       sportName === "Women's Swimming and Diving" ||
       sportName === "Women's Swim & Diving"
     ) {
-      sportName = "W. Swimming and Diving";
+      sportName = "Women's Swimming and Diving";
     } else if (sportName === "Women's Tennis") {
-      sportName = "W. Tennis";
+      sportName = "Women's Tennis";
     } else if (sportName === "Water Polo") {
       sportName = "Water Polo";
     } else if (sportName === "Wrestling") {

@@ -82,20 +82,3 @@ export const stringToClosestSportName = maybeSportName => {
   ).sport;
 };
 
-// const checks = [
-//   stringToClosestSportName("Baseball") === "baseball",
-//   stringToClosestSportName("M. Basketball") === "basketball",
-//   stringToClosestSportName("M. Cross Country") === "cross-country",
-//   stringToClosestSportName("Football") === "football",
-//   stringToClosestSportName("M. Golf") === "golf",
-//   stringToClosestSportName("Ice Hockey") === "ice-hockey",
-//   stringToClosestSportName("M. Swimming and Diving") === "swimming-and-diving",
-//   stringToClosestSportName("M. Tennis") === "tennis",
-//   stringToClosestSportName("M. Track and Field") === "track-and-field",
-//   stringToClosestSportName("Wrestling") === "wrestling",
-// ];
-// for (const check of checks) {
-//   if (!check) {
-//     throw new Error("stringToClosestSportName is not working as expected");
-//   }
-// }

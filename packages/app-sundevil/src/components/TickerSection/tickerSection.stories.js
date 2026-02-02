@@ -3,7 +3,7 @@ import React from "react";
 import TickerSection from "./TickerSection.js";
 
 const props = {
-  tickerAPI: "https://dev-web-sda.ws.asu.edu/jsonapi/node/past_games_new?sort=-field_date_time"
+  tickerAPI: "https://asuapp4dev.prod.acquia-sites.com/jsonapi/node/past_games_new?sort=-field_date_time"
 }
 export default {
   title: "Ticker Section",

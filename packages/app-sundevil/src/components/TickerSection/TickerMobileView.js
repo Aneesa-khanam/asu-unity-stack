@@ -121,7 +121,10 @@ export const TickerMobile = ({ tickerAPI }) => {
                       sportName={stringToClosestSportName(item.sportName)}
                     />
                   </div>
-                  <div>{item.sportName}</div>
+                  <div>
+                    {/* {item.sportName} */}
+                    {formatSportName(item.sportName)}
+                  </div>
                 </div>
                 <div style={{ fontWeight: "normal" }}>{item.gameday}</div>
               </div>

@@ -29,7 +29,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240715-m-basketball-history-hobbs-supporting-sun-devils-62",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": "Article",
-    "field_sport_category": "M. Basketball"
+    "field_sport_category": "Men's Basketball"
   },
   {
     "id": "100689",
@@ -45,7 +45,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240717-m-basketball-numbers-sun-devil-academic-notes-202324",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": "Article",
-    "field_sport_category": "M. Basketball"
+    "field_sport_category": "Men's Basketball"
   },
   {
     "id": "100690",
@@ -61,7 +61,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240715-m-swimming-diving-asu-directors-cup-recap-202324",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": "Recap",
-    "field_sport_category": "M. Swimming & Diving"
+    "field_sport_category": "Men's Swimming & Diving"
   },
   {
     "id": "100691",
@@ -233,7 +233,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240717-m-basketball-arizona-state-hosting-2024-ncaa-mens-final-four",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": null,
-    "field_sport_category": "M. Basketball"
+    "field_sport_category": "Men's Basketball"
   },
   {
     "id": "100718",
@@ -345,7 +345,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240717-m-basketball-tammaro-honored-katha-quinn-award",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": "Article",
-    "field_sport_category": "M. Basketball"
+    "field_sport_category": "Men's Basketball"
   },
   {
     "id": "100726",
@@ -361,7 +361,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240717-m-basketball-sun-devil-athletics-celebrates-fall-2023-graduates",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": "Article",
-    "field_sport_category": "M. Basketball"
+    "field_sport_category": "Men's Basketball"
   },
   {
     "id": "100727",
@@ -437,7 +437,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240717-m-ice-hockey-ray-anderson-steps-down-asu-athletic-director",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": null,
-    "field_sport_category": "M. Ice Hockey"
+    "field_sport_category": "Men's Ice Hockey"
   },
   {
     "id": "100733",
@@ -453,7 +453,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240717-m-ice-hockey-how-tony-achille-overcame-lifealtering-diagnosis-give",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": "Article",
-    "field_sport_category": "M. Ice Hockey"
+    "field_sport_category": "Men's Ice Hockey"
   },
   {
     "id": "100734",
@@ -501,7 +501,7 @@
     "ticketing_rsvp_url": "https://news.asu.edu/sun-devil-athletics/20240717-m-track-field-sun-devil-hall-fame-honor-very-special-2023-inductees",
     "ticketing_rsvp_txt": "More Info",
     "field_news_type": "Article",
-    "field_sport_category": "M. Track & Field"
+    "field_sport_category": "Men's Track & Field"
   },
   {
     "id": "100740",
@@ -597,6 +597,6 @@
     "ticketing_rsvp_url": "https://web-sda.ddev.site:8443/sports/mens/baseball",
     "ticketing_rsvp_txt": "test",
     "field_news_type": "Article",
-    "field_sport_category": "M. Basketball"
+    "field_sport_category": "Men's Basketball"
   }
 ]
