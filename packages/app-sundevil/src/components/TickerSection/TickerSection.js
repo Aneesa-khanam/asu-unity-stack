@@ -6,6 +6,12 @@ import { SportIcon } from "../../../../app-sundevil/src/components/SportIcon";
 import { stringToClosestSportName } from "../../../../app-sundevil/src/components/SportIcon/sport-name";
 import { GameDataTicker } from "./game-data-ticker";
 
+const formatSportName = (sportName = "") => {
+  return sportName
+    .replace(/^W\.\s*/i, "Women's ")
+    .replace(/^M\.\s*/i, "Men's ");
+};
+
 export const TickerCarousel = ({ tickerAPI }) => {
   const [items, setItems] = useState([]);
   const [position, setPosition] = useState(0);
@@ -83,7 +89,7 @@ export const TickerCarousel = ({ tickerAPI }) => {
                     sportName={stringToClosestSportName(item.sportName)}
                   />
                 </div>
-                {item.sportName}
+                {formatSportName(item.sportName)}
               </div>
               <div className="line" style={{ fontWeight: "normal" }}>
                 {item.gameday}
