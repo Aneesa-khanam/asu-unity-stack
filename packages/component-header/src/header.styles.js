@@ -111,6 +111,11 @@ const Header = styled.header`
       .navbar.navbar-expand-xl {
         flex-wrap: nowrap;
       }
+      .main-logo {
+        img {
+          margin: 20px 24px 15px 0px !important;
+        }
+      }
     }
   }
   @media (max-width: 922px) {

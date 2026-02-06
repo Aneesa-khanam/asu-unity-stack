@@ -148,7 +148,7 @@ LandingPage.args = {
     {
       id: "m-basketball",
       active: false,
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: {
         svg_icon:
           "https://dev-web-sda.ws.asu.edu//sites/default/files/2024-07/basketball_7.svg",
@@ -179,7 +179,7 @@ LandingPage.args = {
     {
       id: "m-ice-hockey",
       active: false,
-      name: "M. Ice Hockey",
+      name: "Men's Ice Hockey",
       icon: {
         svg_icon:
           "https://dev-web-sda.ws.asu.edu//sites/default/files/2024-07/ice-hockey_1.svg",
@@ -242,7 +242,7 @@ LandingPage.args = {
     {
       id: "w-basketball",
       active: false,
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: {
         svg_icon:
           "https://dev-web-sda.ws.asu.edu//sites/default/files/2024-07/basketball_8.svg",
@@ -305,7 +305,7 @@ LandingPage.args = {
     {
       id: "w-soccer",
       active: false,
-      name: "W. Soccer",
+      name: "Women's Soccer",
       icon: {
         svg_icon:
           "https://dev-web-sda.ws.asu.edu//sites/default/files/2024-07/soccer_1.svg",
@@ -336,7 +336,7 @@ LandingPage.args = {
     {
       id: "m-golf",
       active: false,
-      name: "M. Golf",
+      name: "Men's Golf",
       icon: {
         svg_icon:
           "https://dev-web-sda.ws.asu.edu//sites/default/files/2024-07/golf_2.svg",
@@ -367,7 +367,7 @@ LandingPage.args = {
     {
       id: "m-swimming-&-diving",
       active: false,
-      name: "M. Swimming & Diving",
+      name: "Men's Swimming & Diving",
       icon: {
         svg_icon:
           "https://dev-web-sda.ws.asu.edu//sites/default/files/2024-07/swimming-and-diving_0.svg",

@@ -35,7 +35,7 @@ export const CellTitle = props => {
             height: "100%",
             display: "flex",
             alignItems: "flex-start",
-            justifyContent: "flex-start",
+            justifyContent: "space-between",
             flexDirection: "column",
             flex: 1,
             gap: "14px",

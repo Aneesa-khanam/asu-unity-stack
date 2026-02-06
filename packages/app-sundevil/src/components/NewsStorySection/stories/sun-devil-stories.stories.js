@@ -18,7 +18,7 @@ const newsStories = [
     showSportName: false,
     newsType: "News",
     imageSrc,
-    sportName: "W. Lacrosse",
+    sportName: "Women's Lacrosse",
     sportIcon: "fas fa-lacrosse",
     title: "Gigi Gaspar Named Pac-12 Lacrosse Scholar Athlete of the Year",
   },
@@ -40,7 +40,7 @@ const newsStories = [
     showSportName: false,
     newsType: "Video",
     imageSrc,
-    sportName: "M. Golf",
+    sportName: "Men's Golf",
     sportIcon: "fas fa-golf-ball",
     title:
       "Men's Golf Gets No. 1 Seet at Rancho Santa Fe/The Farms Golf Club Regional",
@@ -63,7 +63,7 @@ const newsStories = [
     showSportName: false,
     newsType: "Game Recap",
     title: "Lacrosse Downs Ducks, Will Face Stanford in Pac-12 Semifinals",
-    sportName: "W. Lacrosse",
+    sportName: "Women's Lacrosse",
     imageSrc,
     sportIcon: "fas fa-lacrosse",
   },
@@ -178,7 +178,7 @@ const props = {
       ],
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -196,7 +196,7 @@ const props = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
       id: "w-basketball",
       position: 6,
@@ -232,7 +232,7 @@ const props = {
       position: 11,
     },
     {
-      name: "W. Lacrosse",
+      name: "Women's Lacrosse",
       icon: "fas fa-lacrosse",
       id: "w-lacrosse",
       position: 12,

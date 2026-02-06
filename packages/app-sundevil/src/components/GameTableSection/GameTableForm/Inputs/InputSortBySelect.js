@@ -32,6 +32,7 @@ export const InputSortBySelect = () => {
     ...option,
     active: option.value === gameTableForm.sortBy,
   }));
+  console.log(optionsWithActive, "optionsWithActive");
 
   return (
     configLayout.includeInputSortBySelect &&

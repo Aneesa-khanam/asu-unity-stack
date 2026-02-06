@@ -10,7 +10,7 @@ export const newsStorySkeleton = {
   imageSrc:
     "https://asuevents.asu.edu/sites/default/files/2024-07/football-2024.jpg",
   sportId: "lacrosse",
-  sportName: "W. Lacrosse",
+  sportName: "Women's Lacrosse",
   sportIcon: "fas fa-lacrosse",
   title: "lorem ipsum dolor sit amet consectetur adipiscing elit ",
 };
