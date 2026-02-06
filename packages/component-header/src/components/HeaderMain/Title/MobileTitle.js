@@ -17,7 +17,7 @@ const MobileTitleWrapper = styled.div`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  padding: 0 20px;
+
   a {
     color: inherit;
     text-decoration: none;
