@@ -240,9 +240,9 @@ LandingPage.args = {
       ],
     },
     {
-      id: "w-basketball",
+      id: "women's-basketball",
       active: false,
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: {
         svg_icon:
           "https://dev-web-sda.ws.asu.edu//sites/default/files/2024-07/basketball_8.svg",
@@ -303,9 +303,9 @@ LandingPage.args = {
       ],
     },
     {
-      id: "w-soccer",
+      id: "women's-soccer",
       active: false,
-      name: "W. Soccer",
+      name: "Women's Soccer",
       icon: {
         svg_icon:
           "https://dev-web-sda.ws.asu.edu//sites/default/files/2024-07/soccer_1.svg",

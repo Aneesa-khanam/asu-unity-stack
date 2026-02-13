@@ -196,9 +196,9 @@ const props = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
       position: 6,
     },
     {
@@ -232,9 +232,9 @@ const props = {
       position: 11,
     },
     {
-      name: "W. Lacrosse",
+      name: "Women's Lacrosse",
       icon: "fas fa-lacrosse",
-      id: "w-lacrosse",
+      id: "women's-lacrosse",
       position: 12,
     },
   ],

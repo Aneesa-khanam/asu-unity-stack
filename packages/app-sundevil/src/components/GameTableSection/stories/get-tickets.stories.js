@@ -170,9 +170,9 @@ GetTickets.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -324,9 +324,9 @@ GetTicketsUpcomingGames.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -450,9 +450,9 @@ GetTicketsOverlapFirstRow.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -569,9 +569,9 @@ GetTicketsOverlapWithSportTabs.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -707,9 +707,9 @@ GetTicketsLight.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -856,9 +856,9 @@ GetTicketsLightSidebar.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -995,9 +995,9 @@ GetTicketsSportTabsOnly.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",

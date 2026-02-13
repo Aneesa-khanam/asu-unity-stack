@@ -34,14 +34,14 @@ const nonTicketedProps = {
   columnIconStyle: {},
   columns: [
     {
-      id: "w-beach-volleyball",
+      id: "women's-beach-volleyball",
       title: "Beach Volleyball",
       icon: "fas fa-volleyball-ball",
       position: 0,
       caption: "(Women)",
     },
     {
-      id: "m-cross-country",
+      id: "men's-cross-country",
       title: "Cross Country",
       icon: "fas fa-running",
       position: 1,

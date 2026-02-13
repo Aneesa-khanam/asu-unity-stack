@@ -8,7 +8,7 @@ const ALL_SPORT_IDS = [
   "basketball",
   "hockey",
   "baseball",
-  "w-basketball",
+  "women's-basketball",
   "softball",
   "soccer",
   "swimming",

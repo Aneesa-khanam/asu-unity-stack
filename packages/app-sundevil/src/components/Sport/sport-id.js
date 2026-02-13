@@ -60,7 +60,7 @@ const ensureGenderPrefix = (s, fallbackGender = SportGender.MEN) => {
     return s;
   }
 
-  if (s.startsWith("m-") || s.startsWith("w-")) {
+  if (s.startsWith("m-") || s.startsWith("w-") || s.startsWith("men's-") || s.startsWith("women's-")) {
     return s;
   }
 
@@ -276,7 +276,7 @@ export function stringToSportIdWithoutGender(str) {
   if (!sportId) {
     return null;
   }
-  if (sportId.startsWith("m-") || sportId.startsWith("w-")) {
+  if (sportId.startsWith("m-") || sportId.startsWith("w-") || sportId.startsWith("men's-") || sportId.startsWith("women's-")) {
     return sportId.slice(2);
   }
   return sportId;
