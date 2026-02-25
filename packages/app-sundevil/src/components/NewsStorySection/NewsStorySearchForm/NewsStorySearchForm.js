@@ -84,6 +84,19 @@ export const NewsStorySearchForm = ({
     return null;
   }
 
+  /**
+   * @param {string | undefined} name
+   * @returns {string}
+   */
+  const formatSportName = (name) => {
+    if (!name) return "";
+
+    if (name.includes("M.")) return name.replace("M.", "Men's");
+    if (name.includes("W.")) return name.replace("W.", "Women's");
+
+    return name;
+  };
+
   return (
     <Root
       style={style}
@@ -125,7 +138,7 @@ export const NewsStorySearchForm = ({
               newsStorySearchForm.update({
                 newsType:
                   cleanString(option.id) ===
-                  cleanString(newsStorySearchForm.state.newsType)
+                    cleanString(newsStorySearchForm.state.newsType)
                     ? null
                     : option.id,
               })
@@ -150,13 +163,13 @@ export const NewsStorySearchForm = ({
               newsStorySearchForm.update({
                 sportId:
                   stringToSportId(option.id) ===
-                  stringToSportId(newsStorySearchForm.state.sportId)
+                    stringToSportId(newsStorySearchForm.state.sportId)
                     ? null
                     : option.id,
               })
             }
             options={sports.map(sport => ({
-              label: sport.name,
+              label: formatSportName(sport.name),
               id: sport.id,
               active:
                 stringToSportId(sport.id) ===

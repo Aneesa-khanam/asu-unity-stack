@@ -20,6 +20,17 @@ export const InputSportTypeSelect = () => {
     sectionName,
   } = useGameTableFormContext();
 
+  /**
+     * @param {string | undefined} name
+     * @returns {string}
+     */
+  const formatSportName = (name) => {
+    if (!name) return "";
+    if (name.includes("M.")) return name.replace("M.", "Men's");
+    if (name.includes("W.")) return name.replace("W.", "Women's");
+    return name;
+  };
+
   const filteredSports = sports.filter(sport => {
     if (isAllId(sport?.id)) {
       return true;
@@ -38,7 +49,7 @@ export const InputSportTypeSelect = () => {
     configInputs.sportTypeSelect?.includeAllOption,
     filteredSports
   ).map(sport => ({
-    label: sport?.name,
+    label: formatSportName(sport?.name),
     id: sport?.id,
     active: sport?.active,
     renderStart: ({ style: iconStyle }) => (

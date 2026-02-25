@@ -17,6 +17,15 @@ export const CellIcon = props => {
   const { game, configLayout } = props;
 
   // const hasContent = game?.sportIcon || game?.sportName;
+  // Transform sportName if it starts with "M." or "W."
+  let displaySportName = game?.sportName;
+  if (isCleanString(displaySportName)) {
+    if (displaySportName.startsWith("M.")) {
+      displaySportName = displaySportName.replace("M.", "Men's");
+    } else if (displaySportName.startsWith("W.")) {
+      displaySportName = displaySportName.replace("W.", "Women's");
+    }
+  }
 
   return configLayout?.includeCellIcon ? (
     <Cell
@@ -36,7 +45,7 @@ export const CellIcon = props => {
       {game?.sportIcon && (
         <Icon icon={game?.sportIcon} style={{ width: "18px" }} />
       )}
-      {isCleanString(game?.sportName) && (
+      {isCleanString(displaySportName) && (
         <div
           style={{
             fontWeight: "bold",
@@ -44,7 +53,7 @@ export const CellIcon = props => {
             textAlign: "center",
           }}
         >
-          {game?.sportName}
+          {displaySportName}
         </div>
       )}
     </Cell>

@@ -29,6 +29,19 @@ export const SportsTabsMobile = ({
 
   const [state, setState] = React.useState({ opened: null });
 
+  /**
+ * @param {string | undefined} name
+ * @returns {string}
+ */
+  const formatSportName = (name) => {
+    if (!name) return "";
+
+    if (name.includes("M.")) return name.replace("M.", "Men's");
+    if (name.includes("W.")) return name.replace("W.", "Women's");
+
+    return name;
+  };
+
   return (
     <Skeleton skeleton={Boolean(skeleton)} className={className}>
       <DropDown
@@ -52,7 +65,12 @@ export const SportsTabsMobile = ({
                 ) : null
               }
               // ⬇️ NEW: default text
-              name={selectedSport?.name || "Choose a sport"}
+              // name={selectedSport?.name || "Choose a sport"}
+              name={
+                selectedSport
+                  ? formatSportName(selectedSport.name)
+                  : "Choose a sport"
+              }
               open={input.open}
               onClick={() =>
                 setState(currentState => ({
@@ -69,7 +87,7 @@ export const SportsTabsMobile = ({
             {sports.map(sport => (
               <SportsTabDropDownItem
                 key={sport.id ?? sport.name}
-                label={sport.name}
+                label={formatSportName(sport.name)}
                 active={selectedSport?.id === sport.id}
                 onClick={() => {
                   setSelectedSport(sport); // ⬅️ NEW: select sport
@@ -82,7 +100,7 @@ export const SportsTabsMobile = ({
                     type: "internal link",
                     region: "main content",
                     section: sectionName,
-                    text: sport?.name ?? " ",
+                    text: formatSportName(sport?.name) ?? " ",
                     component: "text",
                   });
                 }}
