@@ -125,7 +125,7 @@ export const NewsStorySearchForm = ({
               newsStorySearchForm.update({
                 newsType:
                   cleanString(option.id) ===
-                  cleanString(newsStorySearchForm.state.newsType)
+                    cleanString(newsStorySearchForm.state.newsType)
                     ? null
                     : option.id,
               })
@@ -150,13 +150,15 @@ export const NewsStorySearchForm = ({
               newsStorySearchForm.update({
                 sportId:
                   stringToSportId(option.id) ===
-                  stringToSportId(newsStorySearchForm.state.sportId)
+                    stringToSportId(newsStorySearchForm.state.sportId)
                     ? null
                     : option.id,
               })
             }
             options={sports.map(sport => ({
-              label: sport.name,
+              label: sport.name
+                ?.replace(/^M\.\s*/, "Men's ")
+                ?.replace(/^W\.\s*/, "Women's "),
               id: sport.id,
               active:
                 stringToSportId(sport.id) ===

@@ -38,7 +38,9 @@ export const InputSportTypeSelect = () => {
     configInputs.sportTypeSelect?.includeAllOption,
     filteredSports
   ).map(sport => ({
-    label: sport?.name,
+    label: sport?.name
+      ?.replace(/^M\.\s*/, "Men's ")
+      ?.replace(/^W\.\s*/, "Women's "),
     id: sport?.id,
     active: sport?.active,
     renderStart: ({ style: iconStyle }) => (

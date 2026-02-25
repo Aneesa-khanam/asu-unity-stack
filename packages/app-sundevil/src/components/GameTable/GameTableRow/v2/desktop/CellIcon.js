@@ -17,6 +17,11 @@ export const CellIcon = props => {
   const { game, configLayout } = props;
 
   // const hasContent = game?.sportIcon || game?.sportName;
+  const rawName = game?.sportName;
+
+  const displayName =
+    rawName?.replace(/^M\.\s*/, "Men's ")
+      ?.replace(/^W\.\s*/, "Women's ");
 
   return configLayout?.includeCellIcon ? (
     <Cell
@@ -36,7 +41,8 @@ export const CellIcon = props => {
       {game?.sportIcon && (
         <Icon icon={game?.sportIcon} style={{ width: "18px" }} />
       )}
-      {isCleanString(game?.sportName) && (
+      {/* {isCleanString(game?.sportName) && ( */}
+      {isCleanString(rawName) && (
         <div
           style={{
             fontWeight: "bold",
@@ -44,7 +50,8 @@ export const CellIcon = props => {
             textAlign: "center",
           }}
         >
-          {game?.sportName}
+          {/* {game?.sportName} */}
+          {displayName}
         </div>
       )}
     </Cell>
