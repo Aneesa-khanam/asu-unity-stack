@@ -13,7 +13,7 @@ Default.args = {
   titleH2: "",
   titleH3: "Featured partners",
   sectionName: "Featured partners",
-  carouselType: "featured_partner_carousel",
+  carouselType: "additional_partner_carousel",
   buttonLink: "https://example.com",
   buttonLabel: "Partner with us",
   footerLink: "https://example.com",
