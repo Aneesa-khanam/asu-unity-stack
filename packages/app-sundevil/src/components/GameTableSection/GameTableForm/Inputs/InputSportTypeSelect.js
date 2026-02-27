@@ -46,6 +46,8 @@ export const InputSportTypeSelect = () => {
     ),
   }));
 
+  console.log("options", options);
+
   return (
     configLayout.includeInputSportType && (
       <Select
