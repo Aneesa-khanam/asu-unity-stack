@@ -47,6 +47,7 @@ export const InputSportTypeSelect = () => {
       <Icon icon={sport.icon} style={iconStyle} />
     ),
   }));
+  console.log(options, 'options');
 
   return (
     configLayout.includeInputSportType && (

@@ -17,6 +17,8 @@ const REPLACEMENTS = {
   "man's": "m",
   "male": "m",
   "female": "w",
+  "m.": "m",
+  "w.": "w",
 };
 
 export function camelToKebab(str) {
@@ -60,7 +62,7 @@ const ensureGenderPrefix = (s, fallbackGender = SportGender.MEN) => {
     return s;
   }
 
-  if (s.startsWith("m-") || s.startsWith("w-")) {
+  if (s.startsWith("m-") || s.startsWith("w-") || s.startsWith("men's-") || s.startsWith("women's-")) {
     return s;
   }
 
@@ -271,6 +273,33 @@ export function stringToSportId(
   return output;
 }
 
+export function sportIdToDisplayName(id) {
+  if (typeof id !== "string" || id.length === 0) {
+    return "";
+  }
+
+  const parts = id.split("-").filter(Boolean);
+
+  let genderLabel = "";
+  let rest = parts;
+
+  if (parts[0] === "m") {
+    genderLabel = "Men's";
+    rest = parts.slice(1);
+  } else if (parts[0] === "w") {
+    genderLabel = "Women's";
+    rest = parts.slice(1);
+  }
+
+  const sportName = rest
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  return genderLabel
+    ? `${genderLabel} ${sportName}`
+    : sportName;
+}
+
 export function stringToSportIdWithoutGender(str) {
   const sportId = stringToSportId(str);
   if (!sportId) {
@@ -278,6 +307,12 @@ export function stringToSportIdWithoutGender(str) {
   }
   if (sportId.startsWith("m-") || sportId.startsWith("w-")) {
     return sportId.slice(2);
+  }
+  if (sportId.startsWith("women's-")) {
+    return sportId.slice(8);
+  }
+  if (sportId.startsWith("men's-")) {
+    return sportId.slice(6);
   }
   return sportId;
 }
