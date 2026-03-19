@@ -1059,7 +1059,7 @@ export const HEADER_TEST_PROPS = {
           },
           {
             href: "/tickets/mens-basketball",
-            text: "M. Basketball",
+            text: "Men's Basketball",
             device: "both_desktop_and_mobile",
             icon: {
               svg_icon:
@@ -1071,7 +1071,7 @@ export const HEADER_TEST_PROPS = {
           },
           {
             href: "/tickets/womens-basketball",
-            text: "W. Basketball",
+            text: "Women's Basketball",
             device: "both_desktop_and_mobile",
             icon: {
               svg_icon:

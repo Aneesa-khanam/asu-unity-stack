@@ -208,16 +208,16 @@ SunDevilAthleticsEvents.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
-      id: "basketball",
+      id: "men's-basketball",
     },
     {
       name: "Hockey",
       icon: "fas fa-hockey-puck",
       position: 4,
-      id: "hockey",
+      id: "men's-hockey",
     },
     {
       name: "Baseball",
@@ -226,9 +226,9 @@ SunDevilAthleticsEvents.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",

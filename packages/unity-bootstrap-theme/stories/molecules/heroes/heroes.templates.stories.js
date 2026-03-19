@@ -47,7 +47,6 @@ const Hero = ({size}) => (
       alt="Sample placeholder image."
       width="2560"
       height="512"
-      loading="lazy"
       decoding="async"
       fetchpriority="high"
     />
@@ -121,7 +120,6 @@ const StoryHero = ({size}) => (
       alt="Sample placeholder image."
       width="2560"
       height="512"
-      loading="lazy"
       decoding="async"
       fetchpriority="high"
     />

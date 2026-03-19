@@ -22,7 +22,6 @@ export const LargeImageNoCaptionComponent = () => (
       alt="Random image. REPLACE with appropriate alt text for accessibility."
       width="1200"
       height="750"
-      loading="lazy"
       decoding="async"
       fetchpriority="high"
     />
@@ -37,7 +36,6 @@ export const LargeImageNoCaptionComponentBorderless = () => (
       alt="Random image. REPLACE with appropriate alt text for accessibility."
       width="1200"
       height="750"
-      loading="lazy"
       decoding="async"
       fetchpriority="high"
     />
@@ -53,7 +51,6 @@ export const LargeImageCaptionComponent = () => (
         alt="Random image with caption below. REPLACE with appropriate alt text for accessibility."
         width="800"
         height="600"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -78,7 +75,6 @@ export const LargeImageCaptionComponentBorderless = () => (
         alt="Random image with caption below. REPLACE with appropriate alt text for accessibility."
         width="800"
         height="600"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -104,7 +100,6 @@ export const LargeImagesDropShadowComponent = () => (
         alt="Random image with dropshadow. REPLACE with appropriate alt text."
         width="800"
         height="600"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -123,7 +118,6 @@ export const LargeImagesDropShadowComponent = () => (
           alt="Random image with caption below. REPLACE with appropriate alt text for accessibility."
           width="800"
           height="600"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />
@@ -169,7 +163,6 @@ export const SmallImagesComponent = () => (
           alt="Random image with dropshadow. REPLACE with appropriate alt text."
           width="800"
           height="600"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />
@@ -190,7 +183,6 @@ export const SmallImagesComponent = () => (
             alt="Random image with caption below. REPLACE with appropriate alt text for accessibility."
             width="800"
             height="600"
-            loading="lazy"
             decoding="async"
             fetchpriority="high"
           />

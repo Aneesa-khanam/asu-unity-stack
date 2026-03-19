@@ -72,7 +72,6 @@ export const BlockquoteWithImage = ({type, reversed}) => {
           alt="Pretend this is Michael M. Crow, President of ASU"
           width="600"
           height="400"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />

@@ -4,17 +4,19 @@ import { stringToSportId } from "./sport-id";
 describe("sportId", () => {
   test("stringToSportId", () => {
     expect(stringToSportId("__football__")).toBe("football");
-    expect(stringToSportId("  M. Basketball ")).toBe("m-basketball");
-    expect(stringToSportId("W.    Basketball  ")).toBe("w-basketball");
+    expect(stringToSportId("  Men's Basketball ")).toBe("men's-basketball");
+    expect(stringToSportId("Women's    Basketball  ")).toBe(
+      "women's-basketball"
+    );
     expect(stringToSportId("  Lacrosse")).toBe("lacrosse");
-    expect(stringToSportId("m.  Lacrosse")).toBe("m-lacrosse");
+    expect(stringToSportId("men's  Lacrosse")).toBe("men's-lacrosse");
 
-    expect(stringToSportId("W. Lacrosse")).toBe("w-lacrosse");
+    expect(stringToSportId("Women's Lacrosse")).toBe("women's-lacrosse");
     expect(stringToSportId("")).toBe(null);
     expect(stringToSportId(null)).toBe(null);
-    expect(stringToSportId("mens football")).toBe("m-football");
-    expect(stringToSportId("women's football")).toBe("w-football");
-    expect(stringToSportId("men's football")).toBe("m-football");
+    expect(stringToSportId("men's football")).toBe("men's-football");
+    expect(stringToSportId("women's football")).toBe("women's-football");
+    expect(stringToSportId("men's football")).toBe("men's-football");
     expect(stringToSportId("lacrosse")).toBe("lacrosse");
     expect(stringToSportId(123)).toBe(null);
   });
@@ -26,12 +28,12 @@ describe("sportId", () => {
     ).toBe("football");
     expect(
       stringToSportId("sports.uni.edu/about/events-calendar?m-basketballview")
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
 
     // News
     expect(
       stringToSportId("collegeteams.com/about/news?w-volleyballview")
-    ).toBe("w-volleyball");
+    ).toBe("women's-volleyball");
     expect(
       stringToSportId("university-sports.org/about/news?lacrosseview")
     ).toBe("lacrosse");
@@ -41,15 +43,15 @@ describe("sportId", () => {
       "baseball"
     );
     expect(stringToSportId("sporttickets.net/tickets?w-soccerview")).toBe(
-      "w-soccer"
+      "women's-soccer"
     );
 
     // Schedule
     expect(
       stringToSportId("athletics.college.edu/sports/womens/basketball")
-    ).toBe("w-basketball");
+    ).toBe("women's-basketball");
     expect(stringToSportId("uni-sports.com/sports/mens/tennis")).toBe(
-      "m-tennis"
+      "men's-tennis"
     );
 
     // Edge cases
@@ -65,9 +67,9 @@ describe("sportId", () => {
       stringToSportId(
         "Sports.University.edu/about/events-calendar?WomenS-GolfView"
       )
-    ).toBe("w-golf");
+    ).toBe("women's-golf");
     expect(stringToSportId("ATHLETICS.EDU/sports/Mens/Swimming")).toBe(
-      "m-swimming"
+      "men's-swimming"
     );
   });
 
@@ -77,29 +79,31 @@ describe("sportId", () => {
     );
     expect(
       stringToSportId("sundevils.com/about/events-calendar?sport=m-basketball")
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
     expect(stringToSportId("sundevils.com/tickets?sport=w-basketball")).toBe(
-      "w-basketball"
+      "women's-basketball"
     );
     expect(stringToSportId("sundevils.com/sports/womens/basketball")).toBe(
-      "w-basketball"
+      "women's-basketball"
     );
     expect(stringToSportId("sundevils.com/sports/mens/football")).toBe(
-      "m-football"
+      "men's-football"
     );
     expect(stringToSportId("sundevils.com/about/news?sport=w-lacrosse")).toBe(
-      "w-lacrosse"
+      "women's-lacrosse"
     );
     expect(
       stringToSportId("sundevils.com/about/events-calendar?sport=mens-soccer")
-    ).toBe("m-soccer");
+    ).toBe("men's-soccer");
     expect(
       stringToSportId("sundevils.com/tickets?sport=womens-volleyball")
-    ).toBe("w-volleyball");
+    ).toBe("women's-volleyball");
     expect(stringToSportId("sundevils.com/sports/mens/tennis")).toBe(
-      "m-tennis"
+      "men's-tennis"
     );
-    expect(stringToSportId("sundevils.com/sports/womens/golf")).toBe("w-golf");
+    expect(stringToSportId("sundevils.com/sports/womens/golf")).toBe(
+      "women's-golf"
+    );
 
     // Edge cases
     expect(stringToSportId("sundevils.com/about/news")).toBe(null);
@@ -110,11 +114,11 @@ describe("sportId", () => {
 
     // Test that the function is case-insensitive
     expect(stringToSportId("sundevils.com/sports/Mens/football")).toBe(
-      "m-football"
+      "men's-football"
     );
 
     expect(stringToSportId("sundevils.com/sports/WOMENS/football")).toBe(
-      "w-football"
+      "women's-football"
     );
   });
 
@@ -126,7 +130,7 @@ describe("sportId", () => {
 
     // URLs with fragments
     expect(stringToSportId("example.com/sports/mens/soccer#schedule")).toBe(
-      "m-soccer"
+      "men's-soccer"
     );
 
     // URLs with encoded characters
@@ -136,7 +140,7 @@ describe("sportId", () => {
 
     // Malformed URLs
     expect(stringToSportId("http:////example.com/sports/womens/golf")).toBe(
-      "w-golf"
+      "women's-golf"
     );
 
     // URLs with sport names containing numbers
@@ -144,17 +148,17 @@ describe("sportId", () => {
 
     // URLs with unusual capitalization
     expect(stringToSportId("example.com/sports/mEnS/bAsKeTbAlL")).toBe(
-      "m-basketball"
+      "men's-basketball"
     );
 
     // Sport names with apostrophes or other special characters
     expect(
       stringToSportId("example.com/sports?sport=women's-beach-volleyball")
-    ).toBe("w-beach-volleyball");
+    ).toBe("women's-beach-volleyball");
 
     // URLs with empty segments
     expect(stringToSportId("example.com//sports///mens//swimming")).toBe(
-      "m-swimming"
+      "men's-swimming"
     );
 
     // Very long sport names
@@ -183,14 +187,14 @@ describe("sportId", () => {
   test("with sub domain", () => {
     // URLs with subdomains
     expect(stringToSportId("sports.example.com/mens/basketball")).toBe(
-      "m-basketball"
+      "men's-basketball"
     );
   });
 
   test("stringToSportId ip address", () => {
     // URLs with IP addresses instead of domain names
     expect(stringToSportId("http://192.168.1.1/sports/womens/volleyball")).toBe(
-      "w-volleyball"
+      "women's-volleyball"
     );
   });
 
@@ -251,10 +255,10 @@ describe("sportId", () => {
       stringToSportId(
         "sports.uni.edu/about/events-calendar?sport=m-basketballview"
       )
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
     expect(
       stringToSportId("collegeteams.com/about/news?sport=w-volleyballview")
-    ).toBe("w-volleyball");
+    ).toBe("women's-volleyball");
     expect(
       stringToSportId("university-sports.org/about/news?sport=lacrosseview")
     ).toBe("lacrosse");
@@ -262,7 +266,7 @@ describe("sportId", () => {
       stringToSportId("tickets.school.edu/tickets?sport=baseballview")
     ).toBe("baseball");
     expect(stringToSportId("sporttickets.net/tickets?sport=w-soccerview")).toBe(
-      "w-soccer"
+      "women's-soccer"
     );
   });
 
@@ -274,12 +278,12 @@ describe("sportId", () => {
       stringToSportId(
         "sundevils.com/about/events-calendar?sport=m-basketballview"
       )
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
     expect(
       stringToSportId(
         "sundevils.com/about/events-calendar?sport=w-volleyballview"
       )
-    ).toBe("w-volleyball");
+    ).toBe("women's-volleyball");
     expect(
       stringToSportId("sundevils.com/about/events-calendar?sport=lacrosseview")
     ).toBe("lacrosse");
@@ -288,7 +292,7 @@ describe("sportId", () => {
     ).toBe("baseball");
     expect(
       stringToSportId("sundevils.com/about/events-calendar?sport=w-soccerview")
-    ).toBe("w-soccer");
+    ).toBe("women's-soccer");
   });
 
   test("Tickets (lists only events that are games ): sundevils.com/tickets?sport={Sport name Taxonomy term}view", () => {
@@ -297,10 +301,10 @@ describe("sportId", () => {
     );
     expect(
       stringToSportId("sundevils.com/tickets?sport=m-basketballview")
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
     expect(
       stringToSportId("sundevils.com/tickets?sport=w-volleyballview")
-    ).toBe("w-volleyball");
+    ).toBe("women's-volleyball");
     expect(stringToSportId("sundevils.com/tickets?sport=lacrosseview")).toBe(
       "lacrosse"
     );
@@ -308,30 +312,32 @@ describe("sportId", () => {
       "baseball"
     );
     expect(stringToSportId("sundevils.com/tickets?sport=w-soccerview")).toBe(
-      "w-soccer"
+      "women's-soccer"
     );
   });
 
   test("Schedule- url : sundevils.com/sports/womens/basketball", () => {
     expect(stringToSportId("sundevils.com/sports/womens/basketball")).toBe(
-      "w-basketball"
+      "women's-basketball"
     );
     expect(stringToSportId("sundevils.com/sports/mens/football")).toBe(
-      "m-football"
+      "men's-football"
     );
     expect(stringToSportId("sundevils.com/sports/womens/lacrosse")).toBe(
-      "w-lacrosse"
+      "women's-lacrosse"
     );
     expect(stringToSportId("sundevils.com/sports/mens-soccer")).toBe(
-      "m-soccer"
+      "men's-soccer"
     );
     expect(stringToSportId("sundevils.com/sports/womens-volleyball")).toBe(
-      "w-volleyball"
+      "women's-volleyball"
     );
     expect(stringToSportId("sundevils.com/sports/mens/tennis")).toBe(
-      "m-tennis"
+      "men's-tennis"
     );
-    expect(stringToSportId("sundevils.com/sports/womens/golf")).toBe("w-golf");
+    expect(stringToSportId("sundevils.com/sports/womens/golf")).toBe(
+      "women's-golf"
+    );
   });
 
   test("real data cross country", () => {
@@ -343,61 +349,61 @@ describe("sportId", () => {
   test("singular woman", () => {
     expect(
       stringToSportId("https://dev-web-sda.ws.asu.edu?sport=Woman-Basketball")
-    ).toBe("w-basketball");
+    ).toBe("women's-basketball");
   });
 
   test("camelCase WomenBasketball", () => {
     expect(
       stringToSportId("https://dev-web-sda.ws.asu.edu?sport=WomenBasketball")
-    ).toBe("w-basketball");
+    ).toBe("women's-basketball");
   });
 
   test("camelCase MenBasketball", () => {
     expect(
       stringToSportId("https://dev-web-sda.ws.asu.edu?sport=MenBasketball")
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
   });
 
   test("camelCase in path MenBasketball", () => {
     expect(
       stringToSportId("https://dev-web-sda.ws.asu.edu/sports/MenBasketball")
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
   });
 
   test("camelCase in path WomenBasketball", () => {
     expect(
       stringToSportId("https://dev-web-sda.ws.asu.edu/sports/WomenBasketball")
-    ).toBe("w-basketball");
+    ).toBe("women's-basketball");
   });
 
   test("Menbasketball", () => {
     expect(
       stringToSportId("https://dev-web-sda.ws.asu.edu/sports/Menbasketball")
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
   });
 
   test("MaleBasketball", () => {
     expect(
       stringToSportId("https://dev-web-sda.ws.asu.edu/sports/MaleBasketball")
-    ).toBe("m-basketball");
+    ).toBe("men's-basketball");
   });
 
   test("femaleBasketball", () => {
-    expect(stringToSportId("femaleBasketball")).toBe("w-basketball");
+    expect(stringToSportId("femaleBasketball")).toBe("women's-basketball");
   });
 
   test("real data mens ice hockey", () => {
     expect(stringToSportId("/about/news?sport=mens-ice-hockeyview")).toBe(
-      "m-ice-hockey"
+      "men's-ice-hockey"
     );
   });
 
   test("wrestling", () => {
     expect(stringToSportId("wrestling")).toBe("wrestling");
 
-    expect(stringToSportId("men's wrestling")).toBe("m-wrestling");
+    expect(stringToSportId("men's wrestling")).toBe("men's-wrestling");
 
-    expect(stringToSportId("women's wrestling")).toBe("w-wrestling");
+    expect(stringToSportId("women's wrestling")).toBe("women's-wrestling");
   });
 
   test("real world use case -- volleyball", () => {
@@ -405,7 +411,7 @@ describe("sportId", () => {
     const sportTag = "Volleyball";
 
     const sportId = stringToSportId(sportTag, stringToSportGender(url));
-    const expected = "w-volleyball";
+    const expected = "women's-volleyball";
     expect(sportId).toBe(expected);
   });
 
@@ -414,7 +420,7 @@ describe("sportId", () => {
     const sportTag = "Triathlon";
 
     const sportId = stringToSportId(sportTag, stringToSportGender(url));
-    const expected = "w-triathlon";
+    const expected = "women's-triathlon";
     expect(sportId).toBe(expected);
   });
 
@@ -429,10 +435,10 @@ describe("sportId", () => {
 
   test("ignore fallback gender if gender is present in string", () => {
     expect(stringToSportId("womens basketball", SportGender.MEN)).toBe(
-      "w-basketball"
+      "women's-basketball"
     );
     expect(stringToSportId("mens basketball", SportGender.WOMEN)).toBe(
-      "m-basketball"
+      "men's-basketball"
     );
   });
 
@@ -446,7 +452,7 @@ describe("sportId", () => {
     const sportTag = "basketball";
     const url = "https://sundevils.com/sports/mens/basketball";
     const actual = stringToSportId(sportTag, stringToSportGender(url));
-    const expected = "m-basketball";
+    const expected = "men's-basketball";
     expect(actual).toBe(expected);
   });
 
@@ -454,39 +460,39 @@ describe("sportId", () => {
     const sportTag = "wrestling";
     const url = "https://sundevils.com/sports/mens/wrestling";
     const actual = stringToSportId(sportTag, stringToSportGender(url));
-    const expected = "m-wrestling";
+    const expected = "men's-wrestling";
     expect(actual).toBe(expected);
   });
 
   test("sport gender mens", () => {
-    const sportTag = "M. Basketball";
+    const sportTag = "Men's Basketball";
     const url = "https://sundevils.com/sports/mens/basketball";
     const actual = stringToSportId(sportTag, stringToSportGender(url));
-    const expected = "m-basketball";
+    const expected = "men's-basketball";
     expect(actual).toBe(expected);
   });
 
   test("sport gender womens", () => {
-    const sportTag = "W. Basketball";
+    const sportTag = "Women's Basketball";
     const url = "https://sundevils.com/sports/womens/basketball";
     const actual = stringToSportId(sportTag, stringToSportGender(url));
-    const expected = "w-basketball";
+    const expected = "women's-basketball";
     expect(actual).toBe(expected);
   });
 
   test("sport gender  ignore mens fallback", () => {
-    const sportTag = "W. Basketball";
+    const sportTag = "Women's Basketball";
     const url = "https://sundevils.com/sports/mens/basketball";
     const actual = stringToSportId(sportTag, stringToSportGender(url));
-    const expected = "w-basketball";
+    const expected = "women's-basketball";
     expect(actual).toBe(expected);
   });
 
   test("sport gender ignore womens fallback", () => {
-    const sportTag = "M. Basketball";
+    const sportTag = "Men's Basketball";
     const url = "https://sundevils.com/sports/womens/basketball";
     const actual = stringToSportId(sportTag, stringToSportGender(url));
-    const expected = "m-basketball";
+    const expected = "men's-basketball";
     expect(actual).toBe(expected);
   });
 
@@ -506,7 +512,7 @@ describe("sportId", () => {
 
   test("real womens sport", () => {
     const url = "https://dev-web-sda.ws.asu.edu/sports/womens/swimming-diving";
-    const expected = "w-swimming-diving";
+    const expected = "women's-swimming-diving";
     const actual = stringToSportId(
       "Swimming & Diving",
       stringToSportGender(url)
@@ -516,7 +522,7 @@ describe("sportId", () => {
 
   test("real swimming and diving", () => {
     const url = "https://dev-web-sda.ws.asu.edu/sports/womens/swimming-diving";
-    const expected = "w-swimming-diving";
+    const expected = "women's-swimming-diving";
     const actual = stringToSportId(url);
     const id = "womens-swimming-and-diving";
     expect(stringToSportId(url)).toEqual(stringToSportId(id));
@@ -525,7 +531,7 @@ describe("sportId", () => {
 
   test("real swimming and diving 2", () => {
     const url = "https://dev-web-sda.ws.asu.edu/sports/womens/swimming-diving";
-    const expected = "w-swimming-diving";
+    const expected = "women's-swimming-diving";
     const actual = stringToSportId(url);
     const id = "women-swimming-&-diving";
     expect(stringToSportId(url)).toEqual(stringToSportId(id));

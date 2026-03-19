@@ -23,7 +23,6 @@ export const ImageOverlapRightOrLeft = ({left}) => {
           alt="Generic image from PlaceIMG"
           width="800"
           height="600"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />

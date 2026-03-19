@@ -134,7 +134,7 @@ Schedule.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -152,9 +152,9 @@ Schedule.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",

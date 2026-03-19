@@ -17,7 +17,6 @@ export const horizontalCardsMap = ({ type = "", numCards = 1 }) => {
               alt="Card image cap"
               width="600"
               height="337"
-              loading="lazy"
               decoding="async"
               fetchpriority="high"
             />

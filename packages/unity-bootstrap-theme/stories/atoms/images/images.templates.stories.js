@@ -23,7 +23,6 @@ export const LargeImageNoCaptionComponent = ({dropShadow}) => {
         alt="Random image. REPLACE with appropriate alt text for accessibility."
         width="1200"
         height="750"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -41,7 +40,6 @@ export const LargeImageCaptionComponent = ({dropShadow}) => {
           alt="Random image with caption below. REPLACE with appropriate alt text for accessibility."
           width="800"
           height="600"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />

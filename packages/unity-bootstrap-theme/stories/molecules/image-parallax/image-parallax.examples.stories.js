@@ -48,7 +48,6 @@ export const twoImagesWithContentInPageOfSections = () =>
           alt="Img alt text"
           width="1200"
           height="900"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />

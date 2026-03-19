@@ -31,7 +31,6 @@ return (
             alt="Sample placeholder image."
             width="1920"
             height="1000"
-            loading="lazy"
             decoding="async"
             fetchpriority="high"
           />

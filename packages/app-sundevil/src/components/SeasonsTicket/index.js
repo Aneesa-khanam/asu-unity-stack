@@ -34,7 +34,6 @@ export const SeasonsTicket = ({
           alt={heroImage.alt ?? " "}
           width={heroImage.width}
           height={heroImage.height}
-          loading="lazy"
           decoding="async"
           fetchPriority="high"
         />

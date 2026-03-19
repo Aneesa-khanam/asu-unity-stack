@@ -88,7 +88,6 @@ export const BlockquoteWithImage = () => (
           alt="Pretend this is Michael M. Crow, President of ASU"
           width="300"
           height="300"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />
@@ -119,7 +118,6 @@ export const BlockquoteNoCitation = () => (
         alt="Image of Walt Disney"
         width="300"
         height="300"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -138,7 +136,6 @@ export const BlockquoteNoCitation = () => (
           alt="Image of Walt Disney"
           width="300"
           height="300"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />
@@ -248,7 +245,6 @@ export const TestimonialsWithImage = () => (
         alt="Pretend this is Han Solo"
         width="600"
         height="400"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -275,7 +271,6 @@ export const TestimonialsWithImage = () => (
           alt="Pretend this is Han Solo"
           width="400"
           height="400"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />

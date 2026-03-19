@@ -24,27 +24,31 @@ export const InputSportTypeSelect = () => {
     if (isAllId(sport?.id)) {
       return true;
     }
-
     if (configInputs.sportTypeSelect?.filterOptionsAvailableInDataSource) {
       return gameTableFormInputOptions?.allSportId?.some(sportId =>
         isEqual(stringToSportId, sportId, sport?.id)
       );
     }
-
     return true;
   });
 
   const options = includeAllOptionWhen(
     configInputs.sportTypeSelect?.includeAllOption,
     filteredSports
-  ).map(sport => ({
-    label: sport?.name,
-    id: sport?.id,
-    active: sport?.active,
-    renderStart: ({ style: iconStyle }) => (
-      <Icon icon={sport.icon} style={iconStyle} />
-    ),
-  }));
+  ).map(sport => {
+    const formattedName = sport?.name
+      ?.replace(/^M\.\s?/i, "Men's ")
+      ?.replace(/^W\.\s?/i, "Women's ");
+
+    return {
+      label: formattedName,
+      id: sport?.id,
+      active: sport?.active,
+      renderStart: ({ style: iconStyle }) => (
+        <Icon icon={sport.icon} style={iconStyle} />
+      ),
+    };
+  });
 
   console.log("options", options);
 

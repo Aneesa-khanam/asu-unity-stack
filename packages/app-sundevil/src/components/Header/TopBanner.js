@@ -71,7 +71,7 @@ export const TopBanner = ({
           width: "100%",
           backgroundColor: "#E8E8E8",
           borderBottom: "1px solid #d0d0d0",
-          padding: "32px",
+          padding: "15px 32px",
           height: "100%",
           display: "flex",
           flexDirection: "column",

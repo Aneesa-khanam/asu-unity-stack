@@ -79,10 +79,10 @@ AllSports.args = {
       ],
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
-      id: "basketball",
+      id: "men's-basketball",
     },
     {
       name: "Hockey",
@@ -97,9 +97,9 @@ AllSports.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",

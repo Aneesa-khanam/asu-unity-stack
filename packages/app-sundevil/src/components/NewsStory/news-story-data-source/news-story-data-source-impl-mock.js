@@ -47,7 +47,7 @@ const newsStories = [
     newsType,
     imageSrc,
     sportId,
-    sportName: "W. Lacrosse",
+    sportName: "Women's Lacrosse",
     sportIcon: "fas fa-lacrosse",
     title: `News Story ${newsType} ${sportId} ${Math.floor(
       Math.random() * 100

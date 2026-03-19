@@ -84,6 +84,11 @@ export const NewsStorySearchForm = ({
     return null;
   }
 
+  const formatSportLabel = (label = "") => {
+    console.log("formatSportLabel", label);
+    return label.replace(/^M\.\s*/i, "Men's ").replace(/^W\.\s*/i, "Womens' ");
+  };
+
   return (
     <Root
       style={style}
@@ -156,7 +161,7 @@ export const NewsStorySearchForm = ({
               })
             }
             options={sports.map(sport => ({
-              label: sport.name,
+              label: formatSportLabel(sport.name),
               id: sport.id,
               active:
                 stringToSportId(sport.id) ===

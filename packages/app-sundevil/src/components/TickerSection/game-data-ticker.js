@@ -1,4 +1,4 @@
-import { IGameDataSource } from "../../../../app-sundevil/src/components/Game/game-data-source";
+import { IGameDataSource } from "../Game/game-data-source";
 
 const itemToGame = item => {
   const sportName = updateSportName(item.attributes?.field_sport_name);

@@ -64,7 +64,6 @@ export const cardNoTemplates = args => {
           alt="Card image cap"
           width="600"
           height="337"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />

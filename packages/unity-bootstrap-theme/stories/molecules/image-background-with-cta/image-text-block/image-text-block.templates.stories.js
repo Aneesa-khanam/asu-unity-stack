@@ -54,7 +54,6 @@ export const ImageLeftOrRight = ({right, bgColor, extraContent}) =>
         alt="Random image. REPLACE with appropriate alt text for accessibility."
         width="1200"
         height="750"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       ></img>

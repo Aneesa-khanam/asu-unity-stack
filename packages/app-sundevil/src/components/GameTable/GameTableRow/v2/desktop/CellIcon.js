@@ -18,6 +18,13 @@ export const CellIcon = props => {
 
   // const hasContent = game?.sportIcon || game?.sportName;
 
+  /**
+   * @param {string} name
+   * @returns {string}
+   */
+  const formatSportName = name =>
+    name.replace(/^m\.\s*/i, "Men's ").replace(/^w\.\s*/i, "Women's ");
+
   return configLayout?.includeCellIcon ? (
     <Cell
       className="section-icon-cell"
@@ -44,7 +51,8 @@ export const CellIcon = props => {
             textAlign: "center",
           }}
         >
-          {game?.sportName}
+          {/* {game?.sportName} */}
+          {game?.sportName && formatSportName(game.sportName)}
         </div>
       )}
     </Cell>

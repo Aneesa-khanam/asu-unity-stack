@@ -152,10 +152,10 @@ GetTickets.args = {
       id: "lacrosse",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
-      id: "basketball",
+      id: "men's-basketball",
     },
     {
       name: "Hockey",
@@ -170,9 +170,9 @@ GetTickets.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -306,16 +306,16 @@ GetTicketsUpcomingGames.args = {
       active: true,
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
-      id: "basketball",
+      id: "men's-basketball",
     },
     {
       name: "Hockey",
       icon: "fas fa-hockey-puck",
       position: 4,
-      id: "hockey",
+      id: "men's-hockey",
     },
     {
       name: "Baseball",
@@ -324,9 +324,9 @@ GetTicketsUpcomingGames.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -432,10 +432,10 @@ GetTicketsOverlapFirstRow.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
-      id: "basketball",
+      id: "men's-basketball",
     },
     {
       name: "Hockey",
@@ -450,9 +450,9 @@ GetTicketsOverlapFirstRow.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -551,7 +551,7 @@ GetTicketsOverlapWithSportTabs.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -569,9 +569,9 @@ GetTicketsOverlapWithSportTabs.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -689,7 +689,7 @@ GetTicketsLight.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -707,9 +707,9 @@ GetTicketsLight.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -838,16 +838,16 @@ GetTicketsLightSidebar.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
-      id: "basketball",
+      id: "men's-basketball",
     },
     {
       name: "Hockey",
       icon: "fas fa-hockey-puck",
       position: 4,
-      id: "hockey",
+      id: "men's-hockey",
     },
     {
       name: "Baseball",
@@ -856,9 +856,9 @@ GetTicketsLightSidebar.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",
@@ -977,7 +977,7 @@ GetTicketsSportTabsOnly.args = {
       id: "football",
     },
     {
-      name: "M. Basketball",
+      name: "Men's Basketball",
       icon: "fas fa-basketball-ball",
       position: 3,
       id: "basketball",
@@ -995,9 +995,9 @@ GetTicketsSportTabsOnly.args = {
       id: "baseball",
     },
     {
-      name: "W. Basketball",
+      name: "Women's Basketball",
       icon: "fas fa-basketball-ball",
-      id: "w-basketball",
+      id: "women's-basketball",
     },
     {
       name: "Softball",

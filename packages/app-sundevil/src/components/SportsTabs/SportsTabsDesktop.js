@@ -105,6 +105,16 @@ export const SportsTabsDesktop = ({
     return null;
   }
 
+  /**
+   * @param {string | undefined | null} name
+   * @returns {string | undefined | null}
+   */
+  const formatSportName = name => {
+    if (!name) return name;
+
+    return name.replace(/^m\.\s*/i, "Men's ").replace(/^w\.\s*/i, "Women's ");
+  };
+
   return (
     // @ts-ignore
     <Skeleton skeleton={Boolean(skeleton)} className={className}>
@@ -134,15 +144,15 @@ export const SportsTabsDesktop = ({
                 orientation="vertical"
                 darkMode={darkMode}
                 sectionName={sectionName}
-                text={sport?.name}
+                text={formatSportName(sport?.name)}
               >
                 <Icon
                   darkMode={darkMode}
-                  title={sport.name}
+                  title={formatSportName(sport.name)}
                   icon={sport.icon}
                   style={ICON_SIZE}
                 />
-                <div>{sport.name}</div>
+                <div>{formatSportName(sport.name)}</div>
               </StyledSportsTab>
             ))}
             {sportsTabSkeletonData
@@ -201,7 +211,7 @@ export const SportsTabsDesktop = ({
                       {moreSports.map(sport => (
                         <SportsTabDropDownItem
                           key={sport.id ?? sport.name}
-                          label={sport.name}
+                          label={formatSportName(sport.name)}
                           active={Boolean(sport.active)}
                           onClick={() => {
                             setState(currentState => ({

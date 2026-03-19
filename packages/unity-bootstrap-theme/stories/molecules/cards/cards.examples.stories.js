@@ -19,7 +19,6 @@ export const cardImages = () => (
         alt="Card image cap"
         width="600"
         height="337"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -33,7 +32,6 @@ export const cardImages = () => (
         alt="Card image cap"
         width="600"
         height="337"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -47,7 +45,6 @@ export const cardImages = () => (
         alt="Card image cap"
         width="600"
         height="337"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
@@ -210,7 +207,6 @@ export const cardDegree = () => (
       alt="Card image cap"
       width="600"
       height="337"
-      loading="lazy"
       decoding="async"
       fetchpriority="high"
     />
@@ -281,7 +277,6 @@ export const cardStory = () => (
       alt="Card image cap"
       width="600"
       height="337"
-      loading="lazy"
       decoding="async"
       fetchpriority="high"
     />
@@ -353,7 +348,6 @@ export const cardEvent = () => (
       alt="Card image cap"
       width="600"
       height="337"
-      loading="lazy"
       decoding="async"
       fetchpriority="high"
     />
@@ -443,7 +437,6 @@ export const cardVariations = () => (
               alt="Card image cap"
               width="600"
               height="337"
-              loading="lazy"
               decoding="async"
               fetchpriority="high"
             />
@@ -581,7 +574,6 @@ export const cardVariations = () => (
               alt="Card image cap"
               width="600"
               height="337"
-              loading="lazy"
               decoding="async"
               fetchpriority="high"
             />
@@ -648,7 +640,6 @@ export const cardVariations = () => (
               alt="Card image cap"
               width="600"
               height="337"
-              loading="lazy"
               decoding="async"
               fetchpriority="high"
             />
@@ -801,7 +792,6 @@ export const cardVariations = () => (
               alt="Card image cap"
               width="600"
               height="337"
-              loading="lazy"
               decoding="async"
               fetchpriority="high"
             />
@@ -916,7 +906,6 @@ export const cardVariations = () => (
               alt="Card image cap"
               width="600"
               height="337"
-              loading="lazy"
               decoding="async"
               fetchpriority="high"
             />
@@ -1050,7 +1039,6 @@ export const checkboxStackedCard = () => (
           alt="Card image cap"
           width="600"
           height="337"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />
@@ -1152,7 +1140,6 @@ export const checkboxInlineCard = () => (
           alt="Card image cap"
           width="600"
           height="337"
-          loading="lazy"
           decoding="async"
           fetchpriority="high"
         />
@@ -1257,7 +1244,6 @@ export const mediaTypeOverlayCard = () => (
                 alt="Card image cap"
                 width="600"
                 height="337"
-                loading="lazy"
                 decoding="async"
                 fetchpriority="high"
               />
@@ -1336,7 +1322,6 @@ export const mediaTypeOverlayCard = () => (
                 alt="Card image cap"
                 width="600"
                 height="337"
-                loading="lazy"
                 decoding="async"
                 fetchpriority="high"
               />
@@ -1455,7 +1440,6 @@ export const RankingCardLarge = () => (
     <img
       src={cardsImage}
       alt="Card ranking large version"
-      loading="lazy"
       decoding="async"
       fetchpriority="high"
     />
@@ -1522,7 +1506,6 @@ export const RankingCardSmall = () => (
       <img
         src={cardsImage}
         alt="Card ranking small version"
-        loading="lazy"
         decoding="async"
         fetchpriority="high"
       />
