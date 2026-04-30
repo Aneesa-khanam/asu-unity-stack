@@ -5,6 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SportIcon } from "../../../../app-sundevil/src/components/SportIcon";
 import { stringToClosestSportName } from "../../../../app-sundevil/src/components/SportIcon/sport-name";
 import { GameDataTicker } from "./game-data-ticker";
+import styled from "styled-components";
+
+
+const ButtonWrapper = styled.button`
+&:focus{
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #191919 !important;
+    outline: none !important;
+}
+`;
 
 const formatSportName = (sportName = "") => {
   return sportName
@@ -44,8 +53,8 @@ export const TickerCarousel = ({ tickerAPI }) => {
           return (
             !isNaN(firstScore) &&
             !isNaN(secondScore) &&
-            firstScore !== 0 &&
-            secondScore !== 0
+            (firstScore !== 0 && secondScore == 0) ||
+            (firstScore == 0 && secondScore !== 0)
           );
         })
         .sort((a, b) => new Date(b.gameday) - new Date(a.gameday));
@@ -79,10 +88,12 @@ export const TickerCarousel = ({ tickerAPI }) => {
       <div className="carousel-view">
         <div
           className="carousel-track"
+          role="list"
+          aria-live="polite"
           style={{ transform: `translateX(${position}px)` }}
         >
           {items.map((item, index) => (
-            <div key={index} className="carousel-item">
+            <div key={index} className="carousel-item" role="listitem">
               <div className="line">
                 <div style={{ color: "#fafafa" }}>
                   <SportIcon
@@ -91,16 +102,16 @@ export const TickerCarousel = ({ tickerAPI }) => {
                 </div>
                 {formatSportName(item.sportName)}
               </div>
-              <div className="line" style={{ fontWeight: "normal" }}>
+              <p className="line mb-0" style={{ fontWeight: "normal" }}>
                 {item.gameday}
-              </div>
-              <div className="line">
-                <div style={winningHighlightStyle(item.firstTeam.won)}>
+              </p>
+              <div className="line" >
+                <p className="mb-0 line" style={winningHighlightStyle(item.firstTeam.won)}>
                   {item.firstTeam.name} {item.firstTeam.score}
-                </div>
-                <div style={winningHighlightStyle(item.secondTeam.won)}>
+                </p>
+                <p className="mb-0 line" style={winningHighlightStyle(item.secondTeam.won)}>
                   {item.secondTeam.name} {item.secondTeam.score}
-                </div>
+                </p>
               </div>
             </div>
           ))}
@@ -108,12 +119,12 @@ export const TickerCarousel = ({ tickerAPI }) => {
       </div>
 
       <div className="slider">
-        <div className="nav-slider" onClick={slideLeft}>
+        <ButtonWrapper className="nav-slider" aria-label="Scroll left" onClick={slideLeft}>
           <FontAwesomeIcon icon={faArrowLeft} />
-        </div>
-        <div className="nav-slider" onClick={slideRight}>
+        </ButtonWrapper>
+        <ButtonWrapper className="nav-slider" aria-label="Scroll right" onClick={slideRight}>
           <FontAwesomeIcon icon={faArrowRight} />
-        </div>
+        </ButtonWrapper>
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ export class NewsStoryDataSourceStatic extends INewsStoryDataSource {
   log() {
     if (this.shouldLog) {
       // eslint-disable-next-line no-console, prefer-rest-params
-      console.log("NewsStoryDataSourceStatic", ...arguments);
+      // console.log("NewsStoryDataSourceStatic", ...arguments);
     }
   }
 

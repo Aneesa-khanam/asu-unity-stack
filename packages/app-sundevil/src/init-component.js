@@ -196,6 +196,8 @@ import { LargeImageCarousel } from "./components/LargeImageCarousel";
 
 import { SectionAnimatedAccordions } from "./components/SectionAnimatedAccordions";
 
+import { TicketsSportFilter } from "./components/TicketsSportFilter";
+
 // const VideoSection = React.lazy(() =>
 //   import("./components/VideoSection").then(module => ({
 //     default: module.VideoSection,
@@ -385,6 +387,13 @@ export const initContactUsCTA = input => {
   RenderReact({
     ...input,
     component: ContactUsCTA,
+  });
+};
+
+export const initTicketsSportFilter = input => {
+  RenderReact({
+    ...input,
+    component: TicketsSportFilter,
   });
 };
 

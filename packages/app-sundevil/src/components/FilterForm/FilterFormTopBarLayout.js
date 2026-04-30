@@ -19,9 +19,9 @@ const Title = styled.div`
   font-weight: bold;
   padding: 0;
   color: ${({
-    // @ts-ignore
-    darkMode,
-  }) => (darkMode ? "#fff !important" : "#191919 !important")};
+  // @ts-ignore
+  darkMode,
+}) => (darkMode ? "#fff !important" : "#191919 !important")};
 `;
 
 const CollapseRoot = styled.button`
@@ -85,6 +85,7 @@ export const FilterFormTopBarLayout = ({
       {hasTitle && (
         <Title
           // @ts-ignore
+          className="game-container-title"
           darkMode={darkMode}
         >
           {title}

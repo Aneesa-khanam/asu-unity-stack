@@ -14,6 +14,7 @@ import { DropDown, DropDownSurface } from "../DropDown";
 import { LabelledInputBase } from "../InputBase/LabelledInputBase";
 import { SelectOption } from "./SelectOption";
 import { SelectOptionEmpty } from "./SelectOptionEmpty";
+import { Icon } from "../../../../app-sundevil/src/components/Icon_";
 
 const Button = styled.button`
   border: none !important;
@@ -66,6 +67,8 @@ export const Select = ({
   const dropdownRef = useRef(null);
   const focused = useFocus([buttonRef, dropdownRef]);
 
+  // console.log("ACTIVE ICON", active?.icon);
+
   useEffect(() => {
     if (!focused) {
       setOpen(false);
@@ -86,10 +89,12 @@ export const Select = ({
           style={{ ...style, cursor: "pointer" }}
           onClick={() => setOpen(openPrev => !openPrev)}
           renderInput={({ id, style: buttonStyle }) => (
-            <Button ref={buttonRef} style={buttonStyle} id={id}>
+            <Button  key={active?.id} ref={buttonRef} style={buttonStyle} id={id}>
               {active ? (
                 <>
-                  {active.renderStart?.({ style: { paddingRight: "0.5rem" } })}
+                  {active?.icon && (
+                    <Icon icon={active.icon} style={{ paddingRight: "0.5rem" }} />
+                  )}
                   <Value>{active.label}</Value>
                 </>
               ) : (
@@ -110,6 +115,7 @@ export const Select = ({
             <SelectOption
               key={option.id ?? option.label}
               label={option.label}
+              icon={option.icon}
               onClick={() => {
                 setOpen(false);
                 onChange?.(option);

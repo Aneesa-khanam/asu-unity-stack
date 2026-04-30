@@ -32,6 +32,8 @@ export const InputSportTypeSelect = () => {
     return true;
   });
 
+  // console.log("filteredSports", filteredSports);
+
   const options = includeAllOptionWhen(
     configInputs.sportTypeSelect?.includeAllOption,
     filteredSports
@@ -44,13 +46,14 @@ export const InputSportTypeSelect = () => {
       label: formattedName,
       id: sport?.id,
       active: sport?.active,
+      icon: sport?.icon,
       renderStart: ({ style: iconStyle }) => (
         <Icon icon={sport.icon} style={iconStyle} />
       ),
     };
   });
 
-  console.log("options", options);
+  // console.log("options", options);
 
   return (
     configLayout.includeInputSportType && (

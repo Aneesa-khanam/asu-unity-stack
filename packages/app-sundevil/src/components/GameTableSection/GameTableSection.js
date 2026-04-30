@@ -426,14 +426,6 @@ GameTableSectionInner.propTypes = {
   configAddToCalender: configAddToCalendarPropTypes,
 };
 
-//
-//
-//
-//
-//
-//
-//
-//
 
 export const GameTableSection = ({
   gameDataSource: gameDataSourceConfig,

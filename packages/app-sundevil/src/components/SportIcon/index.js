@@ -43,7 +43,7 @@ export const SportIcon = ({ sportName }) => {
       return (
         <img
           src="https://sundevils.com//sites/default/files/2024-07/basketball_2.svg"
-          alt="Golf"
+          alt="Basketball"
           className="color-image"
         />
       );
@@ -51,7 +51,7 @@ export const SportIcon = ({ sportName }) => {
       return (
         <img
           src="https://sundevils.com//sites/default/files/2024-07/beach-volleyball_0.svg"
-          alt="Golf"
+          alt="Beach Volleyball"
           className="color-image"
         />
       );
@@ -67,7 +67,7 @@ export const SportIcon = ({ sportName }) => {
       return (
         <img
           src="https://sundevils.com//sites/default/files/2024-07/gymnastics.svg"
-          alt="Lacrosse"
+          alt="Gymnastics"
           className="color-image"
         />
       );
@@ -75,7 +75,7 @@ export const SportIcon = ({ sportName }) => {
       return (
         <img
           src="https://sundevils.com//sites/default/files/2024-07/ice-hockey_0.svg"
-          alt="Golf"
+          alt="Ice Hockey"
           className="color-image"
         />
       );
@@ -91,7 +91,7 @@ export const SportIcon = ({ sportName }) => {
       return (
         <img
           src="https://sundevils.com//sites/default/files/2024-07/tennis_2.svg"
-          alt="Golf"
+          alt="Tennis"
           className="color-image"
         />
       );
@@ -99,7 +99,7 @@ export const SportIcon = ({ sportName }) => {
       return (
         <img
           src="https://sundevils.com//sites/default/files/2024-07/track-and-field.svg"
-          alt="Golf"
+          alt="Track and Field"
           className="color-image"
         />
       );
@@ -115,7 +115,7 @@ export const SportIcon = ({ sportName }) => {
       return (
         <img
           src="https://sundevils.com//sites/default/files/2024-07/wrestling.svg"
-          alt="Golf"
+          alt="Wrestling"
           className="color-image"
         />
       );
