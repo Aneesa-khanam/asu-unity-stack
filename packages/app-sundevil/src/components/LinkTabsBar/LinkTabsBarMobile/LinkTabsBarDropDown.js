@@ -62,6 +62,7 @@ export const LinkTabsBarDropDown = ({ links }) => {
               as="a"
               key={linkTabToKey(link)}
               label={link.label}
+              icon={link.icon}
               href={link.href}
               onClick={() => {
                 setOpen(false);

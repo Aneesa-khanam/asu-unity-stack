@@ -50,6 +50,7 @@ export const LinkTabMoreDropDown = ({ links, moreTabLabel = "More" }) => {
               as="a"
               key={linkTabToKey(link)}
               label={link.label}
+              icon={link.icon}
               href={link.href}
               active={link.active}
               onClick={() => setOpen(false)}

@@ -26,11 +26,11 @@ const cards = [
       "https://images.unsplash.com/photo-1608245449230-4ac19066d2d0?w=768&q=80",
   },
   {
-    id: "ice-hockey",
-    name: "Ice Hockey",
-    category: "Ice Hockey",
-    image:
-      "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=768&q=80",
+    category:"Ice Hockey",
+    icon:{ svg_icon: 'https://asuapp4dev.prod.acquia-sites.com//sites/default/files/2024-08/ice-hockey.svg', svg_icon_name: 'ice-hockey.svg' },
+    id:"ice-hockey",
+    image:"https://asuapp4dev.prod.acquia-sites.com/sites/default/files/styles/image/public/2026-04/ice-hockey.webp?itok=cij87gRk",
+    name:"Ice Hockey"
   },
   {
     id: "baseball",
@@ -84,17 +84,17 @@ const cards = [
 ];
 
 const filterOptions = [
-  "All Sports",
-  "Football",
-  "Basketball",
-  "Ice Hockey",
-  "Baseball",
-  "Softball",
-  "Volleyball",
-  "Wrestling",
-  "Gymnastics",
-  "Soccer",
-  "Lacrosse",
+  { value: "All Sports", label: "All Sports" },
+  { value: "football", label: "Football" },
+  { value: "basketball", label: "Basketball" },
+  { value: "ice-hockey", label: "Ice Hockey" },
+  { value: "baseball", label: "Baseball" },
+  { value: "softball", label: "Softball" },
+  { value: "volleyball", label: "Volleyball" },
+  { value: "wrestling", label: "Wrestling" },
+  { value: "gymnastics", label: "Gymnastics" },
+  { value: "soccer", label: "Soccer" },
+  { value: "lacrosse", label: "Lacrosse" },
 ];
 
 const props = {

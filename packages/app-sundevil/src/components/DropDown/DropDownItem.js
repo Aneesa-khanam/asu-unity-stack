@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
+import { Icon } from "../../../../app-sundevil/src/components/Icon_";
 
 /**
  *
  * @typedef {{
  * label: string;
+ * icon: string;
  * onClick: () => void;
  * active?: boolean;
  * as?: string;
@@ -14,6 +16,7 @@ import styled from "styled-components";
 
 const propTypes = {
   label: PropTypes.string,
+  icon: PropTypes.string,
   onClick: PropTypes.func,
   active: PropTypes.bool,
   as: PropTypes.string,
@@ -63,7 +66,7 @@ const Root = styled.button`
  *
  * @type {React.FC<Props>}
  */
-export const DropDownItem = ({ active, label, onClick, as, ...props }) => {
+export const DropDownItem = ({ active, label, icon, onClick, as, ...props }) => {
   const className = active ? "active" : "inactive";
   return (
     <Root
@@ -73,7 +76,8 @@ export const DropDownItem = ({ active, label, onClick, as, ...props }) => {
       as={as}
       {...props}
     >
-      {label}
+      {icon && <Icon key={JSON.stringify(icon)} icon={icon} />}
+      <span style={{ paddingLeft: "0.5rem" }}>{label}</span>
     </Root>
   );
 };

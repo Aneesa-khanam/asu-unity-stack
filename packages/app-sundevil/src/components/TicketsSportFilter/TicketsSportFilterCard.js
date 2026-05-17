@@ -69,7 +69,6 @@ const LinkRow = styled.div`
     font-weight:bold;
   }
 }
-
 `;
 
 const StyledLink = styled.a`
@@ -168,7 +167,6 @@ export const TicketsSportFilterCard = ({
       style={
         empty ? { pointerEvents: "none", opacity: 0, userSelect: "none" } : {}
       }
-
     >
       <Root>
         {/* Image Section */}
@@ -187,11 +185,14 @@ export const TicketsSportFilterCard = ({
           <Overlay />
 
           <SportLabel>
-            {/* <SportIconSvg type={iconTypeMap[sport.id] || "default"} /> */}
             <SportIcon
               sportName={stringToClosestSportName(sport.name)}
             />
-            <span>{sport.name}</span>
+            <span>
+              {sport.name
+                ?.replace(/^M\.\s*/i, "Men's ")
+                ?.replace(/^W\.\s*/i, "Women's ")}
+            </span>
           </SportLabel>
         </ImageWrapper>
 

@@ -212,6 +212,7 @@ export const SportsTabsDesktop = ({
                         <SportsTabDropDownItem
                           key={sport.id ?? sport.name}
                           label={formatSportName(sport.name)}
+                          icon={sport.icon}
                           active={Boolean(sport.active)}
                           onClick={() => {
                             setState(currentState => ({

@@ -42,13 +42,14 @@ export const TickerMobile = ({ tickerAPI }) => {
           return (
             !isNaN(firstScore) &&
             !isNaN(secondScore) &&
-            firstScore !== 0 &&
-            secondScore !== 0
+            (firstScore !== 0 && secondScore !== 0) ||
+            (firstScore !== 0 && secondScore == 0) ||
+            (firstScore == 0 && secondScore !== 0)
           );
         })
         .sort((a, b) => new Date(b.gameday) - new Date(a.gameday));
 
-      setItems(prev => [...prev, ...filtered]);
+      setItems(prev => [...prev, ...filtered].slice(0, 20));
       setNextLink(data.nextLink || null);
     } catch (error) {
       console.error("Failed to fetch ticker data", error);

@@ -54,12 +54,12 @@ export const TickerCarousel = ({ tickerAPI }) => {
             !isNaN(firstScore) &&
             !isNaN(secondScore) &&
             (firstScore !== 0 && secondScore == 0) ||
-            (firstScore == 0 && secondScore !== 0)
+            (firstScore == 0 && secondScore !== 0) || (firstScore !== 0 && secondScore !== 0)
           );
         })
         .sort((a, b) => new Date(b.gameday) - new Date(a.gameday));
 
-      setItems(prev => [...prev, ...games]);
+      setItems(prev => [...prev, ...games].slice(0, 20));
       setNextLink(data.nextLink);
     } catch (e) {
       console.error("Error fetching ticker data:", e);
