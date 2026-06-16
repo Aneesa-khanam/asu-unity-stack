@@ -1,0 +1,346 @@
+.tabs-section .nav-tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.tabs-section .nav-tabs li {
+  cursor: pointer;
+  border: 1px solid transparent;
+  width: 50%;
+  border-bottom: none;
+  display: flex;
+  height: 96px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  color: #191919;
+}
+
+.tabs-section .tab-content {
+  padding-top: 76px;
+  margin-bottom: 4rem;
+}
+
+.tabs-section .nav-tabs li.active {
+  img {
+    filter: none;
+  }
+}
+
+.tabs-section .nav-tabs li.active,
+.tabs-section .nav-tabs li:focus,
+.tabs-section .nav-tabs li:hover {
+  background-color: white;
+  color: #191919;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.tabs-section .nav-tabs li {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.tabs-section .nav-tabs li:focus,
+.tabs-section .nav-tabs li:hover {
+  background: rgba(255, 255, 255, 0.20);
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+@media (max-width:1260px) {
+  .tabs-section .table-section .table-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .tabs-section .table-section .table-wrapper table {
+    min-width: max-content;
+  }
+}
+
+.tabs-section .table-section tr th {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  padding: 16px;
+  background-color: #191919;
+  border: 1px solid #484848;
+  background: lightgray 0% 0% / 75px 75px repeat, #191919;
+}
+
+.tabs-section .table-section .table-body tr.even-row {
+  border: 1px solid #484848;
+  background: #000;
+  color: #FFF;
+}
+
+.tabs-section .table-section .table-body tr.odd-row {
+  border: 1px solid #484848;
+  background: #191919;
+  color: #FFF;
+}
+
+.tabs-section .table-section .table-body tr td {
+  font-size: 16px;
+  padding: 16px;
+  border: 1px solid #484848;
+}
+
+.tabs-section .table-section .table-body tr td a {
+  color: #FFF;
+}
+
+.tabs-section .table-section .table-body tr td.cell4 {
+  max-width: 232px;
+}
+
+.tabs-section .table-section .table-body tr td.cell6 {
+  max-width: 143px;
+}
+
+.tabs-section .table-section .table-body tr td.cell1 {
+  font-weight: bold;
+}
+
+.tabs-section .table-section .table-body tr td.cell1 {
+  max-width: 190px;
+}
+
+.tabs-section .table-section .table-body tr td.cell2 {
+  min-width: 118px;
+}
+
+.tabs-section .table-section .table-body tr td.cell7 a {
+  color: #191919 !important;
+}
+
+.tabs-section .table-section .table-body tr td.cell5 {
+  min-width: 108px;
+}
+
+.tabs-section .table-section .table-body tr td.cell5 svg.fa-circle-check {
+  color: #78BE20;
+}
+
+.tabs-section .table-section .table-body tr td.cell5 svg.fa-circle-xmark {
+  color: #747474;
+}
+
+.tabs-section .carousel-section {
+  padding-bottom: 4rem;
+}
+
+@media (max-width:767px) {
+  .tabs-section .tab-content .table-section .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .tabs-section .tab-content .table-section .table-wrapper table {
+    width: max-content;
+    min-width: 1176px;
+    border-collapse: collapse;
+  }
+
+  .tabs-section .header-section .tabs-section-title {
+    font-size: 40px !important;
+    line-height: 2.125rem !important;
+    margin-bottom: 24px;
+  }
+}
+
+.tabs-section .header-section .tabs-section-title {
+  font-size: 64px;
+  line-height: 84px;
+}
+
+.tabs-section .mobile-comparison-section .comparison-table .comparison-row td svg.fa-circle-check {
+  color: #78BE20;
+}
+
+.tabs-section .sport-dropdown {
+  width: 100%;
+  display: flex;
+  padding: 24px 32px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #D0D0D0;
+  background: #FFF;
+  align-self: stretch;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 34px;
+}
+
+.tabs-section .tab-content .cta-wrapper .cta-button {
+  color: #191919 !important;
+}
+
+.tabs-section .comparison-dropdowns .mobile-select-lable {
+  font-weight: 700;
+  color: white;
+}
+
+.tabs-section .comparison-dropdowns {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@media (max-width:470px) {
+  .tabs-section .comparison-dropdowns {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.tabs-section .comparison-dropdowns .comparison-select {
+  border: 1px solid #D0D0D0;
+  background: #FFF;
+  color: #747474;
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 154px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tabs-section .mobile-comparison-section .comparison-table table {
+  border: 1px solid #484848;
+  background: #191919;
+  color: white;
+}
+
+.tabs-section .mobile-comparison-section .comparison-table table .table-subtitle td {
+  color: #FFC627;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tabs-section .mobile-comparison-section .comparison-table table .comparison-row td {
+  border: 1px solid #484848;
+  background: #191919;
+  padding: 16px;
+  align-items: center;
+  justify-self: stretch;
+}
+
+.tabs-section {
+  background-position: center, top center, center 770px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, contain, contain;
+}
+
+.dropdown-trigger {
+  min-width: min(100%, 260px);
+  padding: 0.5rem 1.5rem;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #ffffff;
+
+  &.inactive {
+    background-color: transparent;
+    color: #191919;
+
+    &:hover {
+      background-color: rgba(121, 30, 30, 0.1);
+    }
+
+    &:focus {
+      background-color: rgba(25, 25, 25, 0.1);
+    }
+  }
+
+  &.active {
+    background-color: #191919;
+    color: #fafafa;
+  }
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  &:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  &:hover {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.tabs-section .mobile-comparison-section {
+  padding-top: 34px;
+  background-color: #191919;
+}
+
+.tabs-section .mobile-comparison-section .comparison-table table .table-subtitle.food-row-title td {
+  min-width: 154px;
+  white-space: nowrap;
+}
+
+.tabs-section .mobile-comparison-section .comparison-table table .table-subtitle.parking-row-title td {
+  min-width: 154px;
+  white-space: nowrap;
+}
+
+@media (max-width:768px) {
+  .tabs-section .mobile-comparison-section .comparison-table table {
+    border: none;
+  }
+}
+
+.tabs-section .mobile-comparison-section .comparison-table table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tabs-section .mobile-comparison-section .cta-wrapper .cta-button {
+  color: #191919 !important;
+}
+
+.tabs-section .mobile-comparison-section .comparison-table table .comparison-row td a {
+  color: #191919 !important;
+}
+
+@media (max-width:767px) {
+  .tabs-section {
+    background-size: unset !important;
+  }
+}

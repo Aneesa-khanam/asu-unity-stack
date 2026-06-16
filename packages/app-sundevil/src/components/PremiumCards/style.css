@@ -1,0 +1,50 @@
+.premium-cards-carousel .right-content {
+  padding: 46px;
+}
+
+.premium-cards-carousel .card-carousel-content-container {
+  max-height: max-content;
+  background-color: white;
+  margin-left: 2px;
+}
+
+.premium-cards-carousel .card-carousel-content-container .left-content swiper-container swiper-slide {
+  padding: 0px !important;
+}
+
+.premium-cards-carousel .card-carousel-content-container .left-content swiper-container {
+  margin-top: 0px !important;
+}
+
+.premium-cards-carousel .card-carousel-content-container .right-content .list-section .premium-icon {
+  margin-top: 4px;
+  margin-bottom: auto;
+  margin-right: 16px;
+}
+
+.premium-cards-carousel .card-carousel-content-container .right-content .cta-button {
+  color: #191919 !important;
+}
+
+.premium-cards-carousel .card-carousel-content-container .right-content .list-section .list-item {
+  border-bottom: 1px solid #D0D0D0;
+}
+
+.premium-cards-carousel .card-carousel-content-container .right-content .list-section .list-item:last-child {
+  border-bottom: none !important;
+}
+
+
+@media (max-width:767px) {
+  .premium-cards-carousel .right-content {
+    padding: 20px;
+  }
+}
+
+.premium-cards-carousel .card-carousel-content-container .left-content swiper-container {
+  height: stretch;
+}
+
+.premium-cards-carousel .card-carousel-content-container .left-content swiper-container swiper-slide .uds-image-text-block-image-container {
+  height: 100%;
+}
