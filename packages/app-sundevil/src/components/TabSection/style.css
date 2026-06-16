@@ -32,6 +32,13 @@
   }
 }
 
+.tabs-section .nav-tabs li.active:focus,
+.tabs-section .nav-tabs li.active:hover{
+  img {
+    filter: brightness(0) saturate(100%) invert(96%) sepia(96%) saturate(16%) hue-rotate(360deg) brightness(104%) contrast(105%);
+  }
+}
+
 .tabs-section .nav-tabs li.active,
 .tabs-section .nav-tabs li:focus,
 .tabs-section .nav-tabs li:hover {
