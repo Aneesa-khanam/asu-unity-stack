@@ -89,7 +89,24 @@ export const Select = ({
           style={{ ...style, cursor: "pointer" }}
           onClick={() => setOpen(openPrev => !openPrev)}
           renderInput={({ id, style: buttonStyle }) => (
-            <Button  key={active?.id} ref={buttonRef} style={buttonStyle} id={id}>
+            <Button onKeyDown={(e) => {
+              switch (e.key) {
+                case "Enter":
+                case " ":
+                  e.preventDefault();
+                  setOpen(prev => !prev);
+                  break;
+
+                case "Escape":
+                  e.preventDefault();
+                  setOpen(false);
+                  buttonRef.current?.focus();
+                  break;
+
+                default:
+                  break;
+              }
+            }} key={active?.id} ref={buttonRef} style={buttonStyle} id={id}>
               {active ? (
                 <>
                   {active?.icon && (

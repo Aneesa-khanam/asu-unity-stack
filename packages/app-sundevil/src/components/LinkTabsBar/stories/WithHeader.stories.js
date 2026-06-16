@@ -39,7 +39,7 @@ const Story = args => {
         flexDirection: "column",
       }}
     >
-      count={count}
+      {/* count={count} */}
       <div id="navbar">
         <SunDevilsHeader
           {...{

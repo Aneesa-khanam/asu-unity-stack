@@ -12,6 +12,9 @@ const Root = styled.p`
   font-weight: bold;
   a:link {
   }
+  a {
+    text-decoration: underline !important;
+  }
   a:active,
   a:hover {
     text-decoration: underline;
@@ -25,7 +28,7 @@ const OfficialAthleticsSite = ({
   text = "The official athletics site of",
 }) => {
   return (
-    <Root>
+    <Root className="official-site-banner">
       {text}{" "}
       <a
         style={hrefStyle}

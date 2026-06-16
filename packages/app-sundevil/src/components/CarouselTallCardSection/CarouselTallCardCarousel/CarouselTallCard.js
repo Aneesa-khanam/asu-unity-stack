@@ -9,6 +9,21 @@ const Card = styled.div`
   height: 520px;
   position: relative;
   overflow: hidden;
+  &:focus {
+    cursor: pointer;
+    overflow: visible;
+
+    .card-body {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    p,
+    .card-body,
+    .card-body p {
+      overflow: visible;
+    }
+  }
   &:hover .card-body {
     opacity: 1;
     max-height: 200px;

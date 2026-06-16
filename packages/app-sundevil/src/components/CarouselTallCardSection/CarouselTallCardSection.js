@@ -56,7 +56,7 @@ export const CarouselTallCardSection = ({
     : cardWidth;
 
   const sectionHeaderProps = mapSectionHeaderProps(sectionHeader);
-  const sectionName = sectionHeaderProps?.sectionName ?? "";
+  const sectionName = sectionHeaderProps?.title ?? "";
 
   return (
     <Root

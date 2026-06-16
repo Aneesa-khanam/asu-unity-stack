@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { trackGAEvent } from "../../../track-ga/track-ga-event";
 import { CollapseIcon } from "../../CollapseIcon/CollapseIcon";
@@ -10,6 +10,23 @@ import { LinkTab } from "../LinkTab";
 
 export const LinkTabMoreDropDown = ({ links, moreTabLabel = "More" }) => {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
+
   return (
     <DropDown
       open={open}

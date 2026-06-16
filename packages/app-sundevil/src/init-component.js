@@ -198,11 +198,11 @@ import { SectionAnimatedAccordions } from "./components/SectionAnimatedAccordion
 
 import { TicketsSportFilter } from "./components/TicketsSportFilter";
 
-// const VideoSection = React.lazy(() =>
-//   import("./components/VideoSection").then(module => ({
-//     default: module.VideoSection,
-//   }))
-// );
+import { PremiumCards } from "./components/PremiumCards";
+
+import { TabSection } from "./components/TabSection";
+
+import { SectionSeasonMini } from "./components/SectionSeasonMini";
 
 /**
  * @typedef {(input: Omit<import("./render-react").RenderInput, 'component'>) => void} InitComponent
@@ -425,6 +425,13 @@ export const initSidebarAccordion = input => {
   });
 };
 
+export const initTabSection = input => {
+  RenderReact({
+    ...input,
+    component: TabSection,
+  });
+};
+
 export const initIconTextColumnsSection = input => {
   RenderReact({
     ...input,
@@ -466,6 +473,22 @@ export const initTickerSection = input => {
     component: TickerSection,
   });
 };
+
+export const initPremiumCards = input => {
+  RenderReact({
+    ...input,
+    component: PremiumCards,
+  });
+};
+
+
+export const initSectionSeasonMini = input => {
+  RenderReact({
+    ...input,
+    component: SectionSeasonMini,
+  });
+};
+
 
 export const initVideoTabSection = input => {
   RenderReact({
