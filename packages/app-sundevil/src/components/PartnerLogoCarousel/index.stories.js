@@ -24,7 +24,7 @@ Default.args = {
     {
       id: "1",
       imageUrl:
-        "https://asuapp4dev.prod.acquia-sites.com//sites/default/files/2025-12/adidas.webp",
+        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2026-01/coca-cola-official-logo.webp",
       imageAlt: "From The Buttes, Give 'Em Hell Devils! Cheer",
       imageWidth: "228px",
       imageHeight: "139px",
@@ -32,7 +32,7 @@ Default.args = {
     {
       id: "2",
       imageUrl:
-        "https://asuapp4dev.prod.acquia-sites.com//sites/default/files/2025-12/gorjana_0.webp",
+        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2026-01/Allstate-official-logo_0.webp",
       imageAlt: "From The Buttes, Give 'Em Hell Devils! Cheer",
       imageWidth: "228px",
       imageHeight: "139px",
@@ -48,7 +48,7 @@ Default.args = {
     {
       id: "4",
       imageUrl:
-        "https://asuapp4dev.prod.acquia-sites.com//sites/default/files/2025-12/mayo-clinic.webp",
+        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2026-01/jersey-mikes-official-logo_0.webp",
       imageAlt: "From The Buttes, Give 'Em Hell Devils! Cheer",
       imageWidth: "228px",
       imageHeight: "139px",
@@ -56,7 +56,7 @@ Default.args = {
     {
       id: "5",
       imageUrl:
-        "https://asuapp4dev.prod.acquia-sites.com//sites/default/files/2025-12/mayo-clinic.webp",
+        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2026-01/AAA-insurance-official-logo_0.webp",
       imageAlt: "From The Buttes, Give 'Em Hell Devils! Cheer",
       imageWidth: "228px",
       imageHeight: "139px",
@@ -64,7 +64,7 @@ Default.args = {
     {
       id: "6",
       imageUrl:
-        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2025-12/mountain-america-stadium.webp",
+        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2026-01/honey-stinger_0.webp",
       imageAlt: "From The Buttes, Give 'Em Hell Devils! Cheer",
       imageWidth: "228px",
       imageHeight: "139px",
@@ -72,7 +72,7 @@ Default.args = {
     {
       id: "7",
       imageUrl:
-        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2025-12/mountain-america-stadium.webp",
+        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2026-02/desert-financial.png",
       imageAlt: "From The Buttes, Give 'Em Hell Devils! Cheer",
       imageWidth: "228px",
       imageHeight: "139px",
@@ -80,7 +80,7 @@ Default.args = {
     {
       id: "8",
       imageUrl:
-        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2025-12/mountain-america-stadium.webp",
+        "https://asuapp4dev.prod.acquia-sites.com/sites/default/files/2026-01/coors-light-official-logo_0.webp",
       imageAlt: "From The Buttes, Give 'Em Hell Devils! Cheer",
       imageWidth: "228px",
       imageHeight: "139px",
