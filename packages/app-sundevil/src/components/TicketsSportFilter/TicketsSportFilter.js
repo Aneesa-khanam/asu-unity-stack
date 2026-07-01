@@ -7,9 +7,6 @@ import "./style.css";
 import Select from "../Select/Select";
 import { Icon } from "../../../../app-sundevil/src/components/Icon_";
 
-
-
-
 const SelectWrapper = styled.select`
   border: 1px solid rgb(204, 204, 204);
   padding: 0.75rem;
@@ -70,26 +67,11 @@ export const TicketsSportFilter = ({
         <div className="filter-section">
           <h4>Filter by sport</h4>
 
-          {/* <SelectWrapper
-            value={selectedSport}
-            onChange={(e) => handleFilterChange(e.target.value)}
-          >
-            {filterOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-          <Icon icon={option.icon} />
-                {option?.icon && (
-                  <Icon icon={option.icon} style={{ paddingRight: "0.5rem" }} />
-                )}
-                {option?.icon && <Icon key={JSON.stringify(option.icon)} icon={option.icon} />}
-                {option.label}
-              </option>
-            ))}
-          </SelectWrapper> */}
-
           <SelectWrapper
             value={selectedSport}
             onChange={(e) => handleFilterChange(e.target.value)}
             className="tckets-sports-category"
+            aria-label="Filter by sport"
           >
             {[...filterOptions].filter((option) => option.label !== "General")
               .sort((a, b) => {

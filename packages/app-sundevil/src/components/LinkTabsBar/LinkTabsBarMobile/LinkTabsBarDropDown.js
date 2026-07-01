@@ -31,6 +31,7 @@ export const LinkTabsBarDropDown = ({ links }) => {
             paddingRight: "1rem",
           }}
           as="button"
+          aria-label={activeLink?.label}
           focused={isOpen}
           ref={ref}
           onClick={() => {
