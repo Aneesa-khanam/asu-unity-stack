@@ -36,6 +36,7 @@ export const LinkTabMoreDropDown = ({ links, moreTabLabel = "More" }) => {
       renderReference={({ ref, open: isOpen }) => (
         <LinkTab
           as="button"
+          aria-label={moreTabLabel}
           focused={isOpen}
           ref={ref}
           onClick={() => {

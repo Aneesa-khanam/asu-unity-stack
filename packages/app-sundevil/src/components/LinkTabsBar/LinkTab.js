@@ -94,7 +94,7 @@ export const LinkTab = forwardRef(
   ) => {
     const hasLabel = typeof label === "string" && label.trim().length > 0;
     const isIconOnly = Boolean(!hasLabel && icon);
-    const ariaLabel = iconAlt || label || " ";
+    const ariaLabel = iconAlt || label || "Anchor link";
     const ariaLabelFinal = isIconOnly ? iconTooltip || ariaLabel : undefined;
 
     return (
