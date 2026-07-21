@@ -12,14 +12,16 @@ const Root = styled.p`
   font-weight: bold;
   a:link {
   }
-  a {
-    text-decoration: underline !important;
-  }
   a:active,
   a:hover {
     text-decoration: underline;
   }
 `;
+
+// commennted for next round of implemenntation
+//  a {
+//      text-decoration: underline !important;
+//    }
 
 const OfficialAthleticsSite = ({
   href,
