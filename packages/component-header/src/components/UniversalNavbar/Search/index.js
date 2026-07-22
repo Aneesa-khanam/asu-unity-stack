@@ -20,6 +20,21 @@ const SEARCH_GA_EVENT = {
   section: "topbar",
 };
 
+function formatQueryParamValue(format, str) {
+  if (typeof format === "string" && format.includes("x-www-form-urlencoded")) {
+    return encodeURIComponent(str)
+      .replace(/%20/g, "+")
+      .replace(/%2B/g, "+")
+      .trim();
+  }
+
+  if (typeof str === "string") {
+    return str.trim();
+  }
+
+  return str;
+}
+
 const Search = () => {
   const { breakpoint, searchUrl = "", site = "" } = useAppContext();
   const isMobile = useIsMobile(breakpoint);
