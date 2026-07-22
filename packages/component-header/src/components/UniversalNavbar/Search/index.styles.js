@@ -19,6 +19,7 @@ const SearchWrapper = styled.form`
   .${CLASS_NAMES.SEARCH_BUTTON} {
     transition: cubic-bezier(0.19, 1, 0.19, 1);
     font-size: 0.75rem;
+    padding-left: 1.5rem;
     line-height: 1;
     color: ${ASU_GRAY1};
     display: inline-flex;
