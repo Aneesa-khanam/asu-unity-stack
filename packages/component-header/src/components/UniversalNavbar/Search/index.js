@@ -36,11 +36,13 @@ function formatQueryParamValue(format, str) {
 }
 
 const Search = () => {
-  const {universalNavbar, breakpoint, searchUrl = "", site = "" } = useAppContext();
+  const { universalNavbar, breakpoint, searchUrl = "", site = "" } = useAppContext();
+  const placeholder = universalNavbar?.searchPlaceholder ?? "Search asu.edu";
   const isMobile = useIsMobile(breakpoint);
   /** @type {React.MutableRefObject<HTMLInputElement | null>} */
   const inputRef = useRef(null);
   const [open, setOpen] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   const [hasInputValue, setHasInputValue] = useState(false);
 
   useEffect(() => {
@@ -67,10 +69,9 @@ const Search = () => {
     };
 
     const searchInput =
-      form && form.elements
-        ? /** @type {HTMLInputElement|null} */ (form.elements.namedItem("q"))
-        : null;
-
+      form?.elements?.namedItem(
+        universalNavbar?.searchUrlQueryParam ?? "q"
+      );
     // Fallback: always submit within 2s regardless of GTM state. Useful for
     // cases where GTM fails to load or execute for any reason, or if the user
     // has blocked GTM. This will only be called if there are any adblockers or analytics blockers.
@@ -131,9 +132,14 @@ const Search = () => {
                   inputRef={inputRef}
                   hasInputValue={hasInputValue}
                   setHasInputValue={setHasInputValue}
+                  inputValue={inputValue}
+                  setInputValue={setInputValue}
+                  placeholder={placeholder}
                   isMobile={isMobile}
                   onBlur={() => {
-                    if (!hasInputValue) setOpen(false);
+                    if (!hasInputValue) {
+                      setOpen(false);
+                    }
                   }}
                 />
                 <Button
@@ -151,6 +157,9 @@ const Search = () => {
               inputRef={inputRef}
               hasInputValue={hasInputValue}
               setHasInputValue={setHasInputValue}
+              inputValue={inputValue}
+              setInputValue={setInputValue}
+              placeholder={placeholder}
               isMobile={isMobile}
             />
           </label>
@@ -163,6 +172,7 @@ const Search = () => {
           )}
           type="hidden"
         />
+        {/* <input name="url_host" value={site} type="hidden" /> */}
         <input name="site" value="default_collection" type="hidden" />
         <input name="sort" value="date:D:L:d1" type="hidden" />
         <input name="output" value="xml_no_dtd" type="hidden" />
