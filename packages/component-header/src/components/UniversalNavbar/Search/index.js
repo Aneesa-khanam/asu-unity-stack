@@ -36,7 +36,7 @@ function formatQueryParamValue(format, str) {
 }
 
 const Search = () => {
-  const { breakpoint, searchUrl = "", site = "" } = useAppContext();
+  const {universalNavbar, breakpoint, searchUrl = "", site = "" } = useAppContext();
   const isMobile = useIsMobile(breakpoint);
   /** @type {React.MutableRefObject<HTMLInputElement | null>} */
   const inputRef = useRef(null);
