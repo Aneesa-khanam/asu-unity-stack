@@ -172,7 +172,7 @@ const Search = () => {
           )}
           type="hidden"
         />
-        {/* <input name="url_host" value={site} type="hidden" /> */}
+        <input name="url_host" value={site} type="hidden" />
         <input name="site" value="default_collection" type="hidden" />
         <input name="sort" value="date:D:L:d1" type="hidden" />
         <input name="output" value="xml_no_dtd" type="hidden" />
