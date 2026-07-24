@@ -1,13 +1,13 @@
 // @ts-check
-import { trackGAEvent } from "../../../../../shared";
 import React from "react";
 
-import { useAppContext } from "../../core/context/app-context";
+import { trackGAEvent } from "../../../../../shared";
 import { CLASS_NAMES, buildClassName } from "../../core/constants/classNames";
+import { useAppContext } from "../../core/context/app-context";
+import { useIsMobile } from "../../core/hooks/isMobile";
 import { Wrapper } from "./index.styles";
 import { Login } from "./Login";
 import { Search } from "./Search";
-import { useIsMobile } from "../../core/hooks/isMobile";
 
 const DEFAULT_GA_EVENT = {
   event: "link",

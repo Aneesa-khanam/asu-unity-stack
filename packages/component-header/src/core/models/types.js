@@ -136,5 +136,4 @@
  * @property {string} tickerAPI
  */
 
-
 export const JSDOC = "jsdoc";

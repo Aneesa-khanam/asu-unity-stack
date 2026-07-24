@@ -1,13 +1,13 @@
 // @ts-check
-import React from "react";
-import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTicket,
   faCartShopping,
   faArrowRight,
   // Add more icons as needed
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
+import React from "react";
 
 import { ButtonPropTypes } from "../../core/models/app-prop-types";
 import { ButtonWrapper } from "../Button/index.styles";

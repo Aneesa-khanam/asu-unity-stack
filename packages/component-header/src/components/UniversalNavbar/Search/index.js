@@ -1,13 +1,13 @@
 // @ts-check
-import { trackGAEvent } from "../../../../../../shared";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useRef, useEffect } from "react";
-import { Button } from "../../Button";
 
-import { useAppContext } from "../../../core/context/app-context";
+import { trackGAEvent } from "../../../../../../shared";
 import { CLASS_NAMES } from "../../../core/constants/classNames";
+import { useAppContext } from "../../../core/context/app-context";
 import { useIsMobile } from "../../../core/hooks/isMobile";
+import { Button } from "../../Button";
 import { SearchWrapper } from "./index.styles";
 import { SearchInput } from "./SearchInput";
 
@@ -36,7 +36,12 @@ function formatQueryParamValue(format, str) {
 }
 
 const Search = () => {
-  const { universalNavbar, breakpoint, searchUrl = "", site = "" } = useAppContext();
+  const {
+    universalNavbar,
+    breakpoint,
+    searchUrl = "",
+    site = "",
+  } = useAppContext();
   const placeholder = universalNavbar?.searchPlaceholder ?? "Search asu.edu";
   const isMobile = useIsMobile(breakpoint);
   /** @type {React.MutableRefObject<HTMLInputElement | null>} */
@@ -68,10 +73,9 @@ const Search = () => {
       }
     };
 
-    const searchInput =
-      form?.elements?.namedItem(
-        universalNavbar?.searchUrlQueryParam ?? "q"
-      );
+    const searchInput = form?.elements?.namedItem(
+      universalNavbar?.searchUrlQueryParam ?? "q"
+    );
     // Fallback: always submit within 2s regardless of GTM state. Useful for
     // cases where GTM fails to load or execute for any reason, or if the user
     // has blocked GTM. This will only be called if there are any adblockers or analytics blockers.
