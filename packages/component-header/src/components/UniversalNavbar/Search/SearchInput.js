@@ -1,9 +1,10 @@
 // @ts-check
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
+import { trackGAEvent } from "../../../../../../shared";
 import { CLASS_NAMES } from "../../../core/constants/classNames";
 
 /**
@@ -21,6 +22,9 @@ const SearchInput = ({
   inputRef,
   hasInputValue,
   setHasInputValue,
+  inputValue,
+  setInputValue,
+  placeholder,
   isMobile,
   style = {},
   className = "",
@@ -30,19 +34,32 @@ const SearchInput = ({
    * @param {React.ChangeEvent<HTMLInputElement>} e
    */
   const handleInputChange = e => {
-    const value = e.target.value;
+    const { value } = e.target;
+
+    setInputValue(value);
     setHasInputValue(value.length > 0);
+
+    trackGAEvent({
+      event: "search",
+      action: "type",
+      name: "onenter",
+      type: "main search",
+      region: "navbar",
+      section: "topbar",
+      text: value,
+    });
   };
 
   const baseInputProps = {
     ref: inputRef,
     className: `form-control ${className}`,
     type: "search",
-    name: "q",
-    placeholder: "Search asu.edu",
+    name: undefined,
+    value: inputValue,
+    placeholder: placeholder ?? "Search asu.edu",
     required: true,
     onChange: handleInputChange,
-    onBlur: onBlur,
+    onBlur,
     style: {
       paddingLeft: hasInputValue && isMobile ? "1rem" : undefined,
       ...style,
@@ -82,6 +99,9 @@ SearchInput.propTypes = {
   }).isRequired,
   hasInputValue: PropTypes.bool.isRequired,
   setHasInputValue: PropTypes.func.isRequired,
+  inputValue: PropTypes.string.isRequired,
+  setInputValue: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
   isMobile: PropTypes.bool.isRequired,
   style: PropTypes.object,
   className: PropTypes.string,
