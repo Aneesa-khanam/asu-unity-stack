@@ -27,6 +27,8 @@ export const TabSection = ({
     (tab) => tab.tabTitle === activeTab
   );
 
+  // console.log(activeTabData);
+
   const isMobile = useBreakpoint(APP_CONFIG.breakpointMobile);
 
   const comparisonOptions = activeTabData?.cellContent || [];
@@ -161,103 +163,7 @@ export const TabSection = ({
                     </div>
                   )}
 
-                  {activeTabData.tabContentText && (
-                    <h4 className="mt-0 mb-6 text-white">{activeTabData.tabContentText}</h4>
-                  )}
                 </div>
-
-                {/* Right Section */}
-                {activeTabData.cellContent?.length > 0 && (
-                  <div className="table-section">
-                    <div className="table-wrapper">
-                      <table className="w-100">
-                        <thead className="table-header">
-                          <tr>
-                            <th>Experience</th>
-                            <th>Capacity</th>
-                            <th>Seating</th>
-                            <th>Food and beverage</th>
-                            <th>Parking</th>
-                            <th>Key amenity</th>
-                            <th>Reserve</th>
-                          </tr>
-                        </thead>
-                        <tbody className="table-body">
-                          {activeTabData.cellContent?.map((row, index) => (
-                            <tr key={index}
-                              className={index % 2 === 0 ? "even-row" : "odd-row"}>
-                              <td className="cell1">
-                                {row.cell1?.href ? (
-                                  <a
-                                    href={row.cell1.href}
-                                    target="_self"
-                                    rel="noopener noreferrer"
-                                    onClick={() => {
-                                      trackGAEvent({
-                                        event: "link",
-                                        action: "click",
-                                        name: "onclick",
-                                        type: "internal link",
-                                        region: "main content",
-                                        section: "experience",
-                                        text: row.cell1?.title.toLowerCase(),
-                                      });
-                                    }}
-                                  >
-                                    {row.cell1.title}
-                                  </a>
-                                ) : (
-                                  row.cell1?.title
-                                )}
-                              </td>
-                              <td className="cell2">{row.cell2}</td>
-                              <td className="cell3">{row.cell3}</td>
-                              <td className="cell4">{row.cell4}</td>
-                              <td className={`cell5 ${row.cell5 === "correct" ? "text-center" : "text-left"
-                                }`}>
-                                {
-                                  (row.cell5 == 'correct') ? <svg class="svg-inline--fa fa-circle-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path></svg>
-                                    : row.cell5
-                                }
-                              </td>
-                              <td className="cell6">{row.cell6}</td>
-                              <td className="cell7">
-                                {row.cell7?.href ? (
-                                  <a
-                                    href={row.cell7.href}
-                                    target="_self"
-                                    rel="noopener noreferrer"
-                                    role="button"
-                                    className="btn btn-md btn-gold text-dark"
-                                    onClick={() => {
-                                      trackGAEvent({
-                                        event: "link",
-                                        action: "click",
-                                        name: "onclick",
-                                        type: "internal link",
-                                        region: "main content",
-                                        section: "reserve",
-                                        text: row.cell7?.title.toLowerCase(),
-                                      });
-                                    }}
-                                  >
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ticket" class="svg-inline--fa fa-ticket " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style={{ marginTop: "-2px", marginRight: "8px", fontSize: "12px", width: "16px", height: "12px" }}>
-                                      <path fill="currentColor" d="M64 64C28.7 64 0 92.7 0 128l0 64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320l0 64c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-64c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6l0-64c0-35.3-28.7-64-64-64L64 64zm64 112l0 160c0 8.8 7.2 16 16 16l288 0c8.8 0 16-7.2 16-16l0-160c0-8.8-7.2-16-16-16l-288 0c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32l320 0c17.7 0 32 14.3 32 32l0 192c0 17.7-14.3 32-32 32l-320 0c-17.7 0-32-14.3-32-32l0-192z">
-                                      </path>
-                                    </svg>
-                                    {row.cell7.title}
-                                  </a>
-                                ) : (
-                                  row.cell7?.title
-                                )}
-                              </td>
-
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>)}
 
                 {Array.isArray(activeTabData.carousels) &&
                   activeTabData.carousels.length > 0 && (
@@ -278,6 +184,73 @@ export const TabSection = ({
                       ))}
                     </div>
                   )}
+
+                {activeTabData.tabContentText && (
+                  <h2 id={activeTabData.tabTitle.toLowerCase().replace(/\s+/g, '-') + "-" + activeTabData.tabContentTitle.toLowerCase().replace(/\s+/g, '-')} className="mt-0 mb-6 text-white">{activeTabData.tabContentText}</h2>
+                )}
+
+                {/* Right Section */}
+                {activeTabData.cellContent?.length > 0 && (
+                  <div className="table-section">
+                    <div className="table-wrapper">
+                      <table className="w-100">
+                        <thead className="table-header">
+                          <tr>
+                            <th>Experience</th>
+                            <th>Capacity</th>
+                            <th>Seating</th>
+                            <th>Food and beverage</th>
+                            <th>Parking</th>
+                            <th>Key amenity</th>
+                          </tr>
+                        </thead>
+                        <tbody className="table-body">
+                          {activeTabData.cellContent?.map((row, index) => (
+                            <tr key={index}
+                              className={index % 2 === 0 ? "even-row" : "odd-row"}>
+                              <td className="cell1">
+                                {row.cell1?.href ? (
+                                  <div>
+                                    <a
+                                      href={row.cell1.href}
+                                      target="_self"
+                                      rel="noopener noreferrer"
+                                      className="cell1-link"
+                                      onClick={() => {
+                                        trackGAEvent({
+                                          event: "link",
+                                          action: "click",
+                                          name: "onclick",
+                                          type: "internal link",
+                                          region: "main content",
+                                          section: "experience",
+                                          text: row.cell1?.title.toLowerCase(),
+                                        });
+                                      }}
+                                    >
+                                      {row.cell1.title}
+                                    </a><i class="fa fa-external-link ml-2" aria-hidden="true"></i></div>
+                                ) : (
+                                  row.cell1?.title
+                                )}
+                              </td>
+                              <td className="cell2">{row.cell2}</td>
+                              <td className="cell3">{row.cell3}</td>
+                              <td className="cell4">{row.cell4}</td>
+                              <td className={`cell5 ${row.cell5 === "correct" ? "text-center" : "text-left"
+                                }`}>
+                                {
+                                  (row.cell5 == 'correct') ? <svg class="svg-inline--fa fa-circle-check" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path></svg>
+                                    : row.cell5
+                                }
+                              </td>
+                              <td className="cell6">{row.cell6}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>)}
 
               </div>
             )}
@@ -481,10 +454,11 @@ export const TabSection = ({
                         <tr className="comparison-row">
                           <td>
                             {compareData1.cell1?.href ? (
-                              <a
+                             <div> <a
                                 href={compareData1.cell1.href}
                                 target="_self"
                                 rel="noopener noreferrer"
+                                className="cell1-link"
                                 className="text-white font-weight-bold"
                                 onClick={() => {
                                   trackGAEvent({
@@ -499,7 +473,7 @@ export const TabSection = ({
                                 }}
                               >
                                 {compareData1.cell1.title}
-                              </a>
+                              </a><i class="fa fa-external-link ml-2" aria-hidden="true"></i></div>
                             ) : (
                               compareData1.cell1?.title
                             )}
@@ -507,10 +481,11 @@ export const TabSection = ({
 
                           <td>
                             {compareData2.cell1?.href ? (
-                              <a
+                              <div><a
                                 href={compareData2.cell1.href}
                                 target="_self"
                                 rel="noopener noreferrer"
+                                className="cell1-link"
                                 className="text-white font-weight-bold"
                                 onClick={() => {
                                   trackGAEvent({
@@ -525,7 +500,7 @@ export const TabSection = ({
                                 }}
                               >
                                 {compareData2.cell1.title}
-                              </a>
+                              </a><i class="fa fa-external-link ml-2" aria-hidden="true"></i></div>
                             ) : (
                               compareData2.cell1?.title
                             )}
@@ -576,64 +551,7 @@ export const TabSection = ({
                           <td>{compareData2.cell6}</td>
                         </tr>
 
-                        <tr className="table-subtitle"><td>Reserve</td></tr>
-                        <tr className="comparison-row">
-                          <td>
-                            {compareData1.cell7?.href && (
-                              <a
-                                href={compareData1.cell7.href}
-                                className="btn btn-gold btn-md"
-                                target="_self"
-                                rel="noopener noreferrer"
-                                onClick={() => {
-                                  trackGAEvent({
-                                    event: "link",
-                                    action: "click",
-                                    name: "onclick",
-                                    type: "internal link",
-                                    region: "main content",
-                                    section: "reserve",
-                                    text: "get tickets",
-                                  });
-                                }}
-                              >
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ticket" class="svg-inline--fa fa-ticket " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style={{ marginTop: "-2px", marginRight: "8px", fontSize: "12px", width: "16px", height: "12px" }}>
-                                  <path fill="currentColor" d="M64 64C28.7 64 0 92.7 0 128l0 64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320l0 64c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-64c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6l0-64c0-35.3-28.7-64-64-64L64 64zm64 112l0 160c0 8.8 7.2 16 16 16l288 0c8.8 0 16-7.2 16-16l0-160c0-8.8-7.2-16-16-16l-288 0c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32l320 0c17.7 0 32 14.3 32 32l0 192c0 17.7-14.3 32-32 32l-320 0c-17.7 0-32-14.3-32-32l0-192z">
-                                  </path>
-                                </svg>
-                                Get tickets
-                              </a>
-                            )}
-                          </td>
 
-                          <td>
-                            {compareData2.cell7?.href && (
-                              <a
-                                href={compareData2.cell7.href}
-                                className="btn btn-gold btn-md"
-                                target="_self"
-                                rel="noopener noreferrer"
-                                onClick={() => {
-                                  trackGAEvent({
-                                    event: "link",
-                                    action: "click",
-                                    name: "onclick",
-                                    type: "internal link",
-                                    region: "main content",
-                                    section: "reserve",
-                                    text: "get tickets",
-                                  });
-                                }}
-                              >
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ticket" class="svg-inline--fa fa-ticket " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style={{ marginTop: "-2px", marginRight: "8px", fontSize: "12px", width: "16px", height: "12px" }}>
-                                  <path fill="currentColor" d="M64 64C28.7 64 0 92.7 0 128l0 64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320l0 64c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-64c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6l0-64c0-35.3-28.7-64-64-64L64 64zm64 112l0 160c0 8.8 7.2 16 16 16l288 0c8.8 0 16-7.2 16-16l0-160c0-8.8-7.2-16-16-16l-288 0c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32l320 0c17.7 0 32 14.3 32 32l0 192c0 17.7-14.3 32-32 32l-320 0c-17.7 0-32-14.3-32-32l0-192z">
-                                  </path>
-                                </svg>
-                                Get tickets
-                              </a>
-                            )}
-                          </td>
-                        </tr>
                       </table>
 
                     </div>
