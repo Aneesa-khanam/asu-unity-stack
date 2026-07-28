@@ -33,7 +33,7 @@
 }
 
 .tabs-section .nav-tabs li.active:focus,
-.tabs-section .nav-tabs li.active:hover{
+.tabs-section .nav-tabs li.active:hover {
   img {
     filter: brightness(0) saturate(100%) invert(96%) sepia(96%) saturate(16%) hue-rotate(360deg) brightness(104%) contrast(105%);
   }
@@ -107,7 +107,8 @@
 }
 
 .tabs-section .table-section .table-body tr td a {
-  color: #FFF;
+  color: #FFF !important;
+  margin-right: 8px;
 }
 
 .tabs-section .table-section .table-body tr td.cell4 {
@@ -120,10 +121,14 @@
 
 .tabs-section .table-section .table-body tr td.cell1 {
   font-weight: bold;
+
+  a {
+    color: #FFF !important;
+  }
 }
 
 .tabs-section .table-section .table-body tr td.cell1 {
-  max-width: 190px;
+  max-width: 246px;
 }
 
 .tabs-section .table-section .table-body tr td.cell2 {
@@ -193,8 +198,12 @@
   margin-bottom: 34px;
 }
 
-.tabs-section .tab-content .cta-wrapper .cta-button {
+.tabs-section .tab-content .cta-wrapper .cta-button.btn-gold {
   color: #191919 !important;
+}
+
+.tabs-section .tab-content .cta-wrapper .cta-button.btn-maroon {
+  color: #ffffff !important;
 }
 
 .tabs-section .comparison-dropdowns .mobile-select-lable {
@@ -257,7 +266,7 @@
 }
 
 .tabs-section {
-  background-position: center, top center, center 770px;
+  background-position: center, top center, center calc(100% - 304px);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: cover, contain, contain;
 }
