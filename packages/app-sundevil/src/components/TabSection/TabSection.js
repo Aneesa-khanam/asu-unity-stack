@@ -77,9 +77,6 @@ export const TabSection = ({
       className="tabs-section"
       style={{
         paddingTop: "226px",
-        backgroundImage: isMobileImage
-          ? `linear-gradient(90deg, rgba(25, 25, 25, 0.8) 0%, rgba(25, 25, 25, 0.2) 100%), url('${heroTopImage}')`
-          : `linear-gradient(90deg, rgba(25, 25, 25, 0.8) 0%, rgba(25, 25, 25, 0.2) 100%), url('${heroTopImage}'), url('${heroBottomImage}')`,
       }}
     >
       <div className="body-section">

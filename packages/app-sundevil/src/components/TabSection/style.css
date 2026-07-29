@@ -265,11 +265,11 @@
   justify-self: stretch;
 }
 
-.tabs-section {
+/* .tabs-section {
   background-position: center, top center, center calc(100% - 304px);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: cover, contain, contain;
-}
+} */
 
 .dropdown-trigger {
   min-width: min(100%, 260px);
@@ -356,7 +356,7 @@
 }
 
 @media (max-width:767px) {
-  .tabs-section {
+  /* .tabs-section {
     background-size: unset !important;
-  }
+  } */
 }
