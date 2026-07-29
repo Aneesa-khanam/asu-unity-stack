@@ -49,6 +49,7 @@ const Search = () => {
   const [open, setOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [hasInputValue, setHasInputValue] = useState(false);
+  // const formRef = useRef(null);
 
   useEffect(() => {
     if (open && typeof inputRef?.current?.focus === "function") {
@@ -60,33 +61,26 @@ const Search = () => {
    *
    * @param {React.FormEvent<HTMLFormElement>} e
    */
+  /**
+   * @param {React.FormEvent<HTMLFormElement>} e
+   */
   const handleSearch = e => {
-    /** @type {HTMLFormElement} */
-    const form = e?.currentTarget;
     e.preventDefault();
 
-    let submitted = false;
-    const submit = () => {
-      if (!submitted && typeof form?.submit === "function") {
-        submitted = true;
-        form.submit();
-      }
-    };
+    const form = e.currentTarget;
 
-    const searchInput = form?.elements?.namedItem(
-      universalNavbar?.searchUrlQueryParam ?? "q"
-    );
-    // Fallback: always submit within 2s regardless of GTM state. Useful for
-    // cases where GTM fails to load or execute for any reason, or if the user
-    // has blocked GTM. This will only be called if there are any adblockers or analytics blockers.
-    setTimeout(submit, 2000);
-
+    // Fire GA event first
     trackGAEvent({
       ...SEARCH_GA_EVENT,
-      text: searchInput ? searchInput.value : "",
-      eventCallback: submit,
-      eventTimeout: 2000,
+      text: inputValue,
     });
+
+    // Submit after a short delay (same behaviour as old component)
+    setTimeout(() => {
+      if (form instanceof HTMLFormElement) {
+        form.submit();
+      }
+    }, 100);
   };
 
   const handleChangeVisibility = () => {
@@ -151,6 +145,9 @@ const Search = () => {
                   text="Search"
                   as="button"
                   classes={CLASS_NAMES.SUBMIT_BUTTON}
+                  onClick={() => {
+                    inputRef.current?.form?.requestSubmit();
+                  }}
                 />
               </>
             )}
