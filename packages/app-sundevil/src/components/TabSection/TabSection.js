@@ -451,12 +451,11 @@ export const TabSection = ({
                         <tr className="comparison-row">
                           <td>
                             {compareData1.cell1?.href ? (
-                             <div> <a
+                              <div> <a
                                 href={compareData1.cell1.href}
                                 target="_self"
                                 rel="noopener noreferrer"
-                                className="cell1-link"
-                                className="text-white font-weight-bold"
+                                className="text-white cell1-link font-weight-bold"
                                 onClick={() => {
                                   trackGAEvent({
                                     event: "link",
@@ -482,8 +481,7 @@ export const TabSection = ({
                                 href={compareData2.cell1.href}
                                 target="_self"
                                 rel="noopener noreferrer"
-                                className="cell1-link"
-                                className="text-white font-weight-bold"
+                                className="text-white cell1-link font-weight-bold"
                                 onClick={() => {
                                   trackGAEvent({
                                     event: "link",

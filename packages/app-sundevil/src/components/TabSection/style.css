@@ -355,6 +355,11 @@
   color: #191919 !important;
 }
 
+.tabs-section .mobile-comparison-section .comparison-table table .comparison-row td a.cell1-link {
+  color: #ffffff !important;
+  margin-right: 8px;
+}
+
 @media (max-width:767px) {
   /* .tabs-section {
     background-size: unset !important;
