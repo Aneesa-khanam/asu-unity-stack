@@ -325,7 +325,7 @@ export const TabSection = ({
 
             {activeTabData && (
               <div>
-                <div className="mobile-comparison-section container">
+                <div className="mobile-comparison-section mb-6 container">
                   {/* Left Section */}
                   <div className="">
                     {activeTabData.tabContentTitle && (
@@ -371,10 +371,31 @@ export const TabSection = ({
                       </div>
                     )}
 
-                    {activeTabData.tabContentText && (
-                      <h4 className="mt-0 mb-3 text-white">{activeTabData.tabContentText}</h4>
-                    )}
                   </div>
+                  {Array.isArray(activeTabData.carousels) &&
+                    activeTabData.carousels.length > 0 && (
+                      <div className="carousel-section">
+                        {activeTabData.carousels.map((row, index) => (
+                          <PremiumCards
+                            key={`${activeTab}-${index}`}
+                            className={`pb-5 mt-8 pl-0 pr-0 ${index === activeTabData.carousels.length - 1
+                              ? "premium-carousel-last"
+                              : ""
+                              }`}
+                            title={row.title}
+                            body={row.body}
+                            ctas={row.ctas || []}
+                            images={row.images || []}
+                            iconList={row.iconList || []}
+                          />
+                        ))}
+                      </div>
+                    )}
+
+                  {activeTabData.tabContentText && (
+                    <h4 id={activeTabData.tabTitle.toLowerCase().replace(/\s+/g, '-') + "-" + activeTabData.tabContentTitle.toLowerCase().replace(/\s+/g, '-')} className="mt-0 mb-3 text-white">{activeTabData.tabContentText}</h4>
+                  )}
+
                   {/* Dropdowns */}
                   {compareData1 && compareData2 && (
                     <div className="comparison-dropdowns mb-4">
@@ -552,25 +573,7 @@ export const TabSection = ({
                     </div>
                   )}
                 </div>
-                {Array.isArray(activeTabData.carousels) &&
-                  activeTabData.carousels.length > 0 && (
-                    <div className="carousel-section">
-                      {activeTabData.carousels.map((row, index) => (
-                        <PremiumCards
-                          key={`${activeTab}-${index}`}
-                          className={`pb-5 mt-8 ${index === activeTabData.carousels.length - 1
-                            ? "premium-carousel-last"
-                            : ""
-                            }`}
-                          title={row.title}
-                          body={row.body}
-                          ctas={row.ctas || []}
-                          images={row.images || []}
-                          iconList={row.iconList || []}
-                        />
-                      ))}
-                    </div>
-                  )}
+
               </div>
             )}
           </div>
