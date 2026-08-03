@@ -24,7 +24,8 @@ const MobileTitleWrapper = styled.div`
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: fit;
+    width: fit-content;
+
     &:hover {
       text-decoration: underline;
     }
@@ -32,6 +33,22 @@ const MobileTitleWrapper = styled.div`
 `;
 
 const isCleanString = str => typeof str === "string" && str.trim().length > 0;
+
+const renderTrademark = text => {
+  if (!text || !text.includes("®")) {
+    return text;
+  }
+
+  const [before, after] = text.split("®");
+
+  return (
+    <>
+      {before}
+      <span className="sda-trademark">®</span>
+      {after}
+    </>
+  );
+};
 
 export const MobileTitle = () => {
   const { baseUrl, mobile } = useAppContext();
@@ -48,7 +65,7 @@ export const MobileTitle = () => {
         href={baseUrl}
         onFocus={() => trackHeaderInternalLink({ text: mobileTitle })}
       >
-        {mobileTitle}
+        {renderTrademark(mobileTitle)}
       </a>
     </MobileTitleWrapper>
   );

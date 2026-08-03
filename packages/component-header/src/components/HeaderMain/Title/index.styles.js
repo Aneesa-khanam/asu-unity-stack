@@ -15,6 +15,10 @@ const TitleWrapper = styled.div`
   margin: 0;
   width: max-content;
 
+  .sda-trademark{
+    line-height: 22px;
+  }
+
   &.active {
     background-position: -200%;
   }

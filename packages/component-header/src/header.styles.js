@@ -95,6 +95,9 @@ const Header = styled.header`
       a.title-subunit-name {
         font-size: 1.5em;
         transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+        .sda-trademark{
+          line-height: 16px;
+        }
       }
       .navbar-brand img {
         height: 64px;

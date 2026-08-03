@@ -7,16 +7,38 @@ import { TitlePropTypes } from "../../../core/models/app-prop-types";
 import { checkFirstLoad } from "../../../core/utils/helpers/title";
 import { TitleWrapper } from "./index.styles";
 
+const renderTrademark = text => {
+  if (!text || !text.includes("®")) {
+    return text;
+  }
+
+  const [before, after] = text.split("®");
+
+  return (
+    <>
+      {before}
+      <span className="sda-trademark">®</span>
+      {after}
+    </>
+  );
+};
+
 const Title = () => {
   const [active, setActive] = useState(false);
-  const { title, parentOrg, parentOrgUrl, baseUrl, breakpoint, animateTitle } =
-    useAppContext();
+
+  const {
+    title,
+    parentOrg,
+    parentOrgUrl,
+    baseUrl,
+    breakpoint,
+    animateTitle,
+  } = useAppContext();
 
   useEffect(() => {
     if (animateTitle !== false) {
-      // If a custom baseUrl is passed in, it will be used to check for first page load
       let root = baseUrl === "/" ? window.location.hostname : baseUrl;
-      // If relative baseURL given, append to the hostname for checking first page load
+
       if (
         root &&
         !root.includes(window.location.hostname) &&
@@ -47,17 +69,19 @@ const Title = () => {
         >
           {parentOrg}
         </a>
+
         <a
           className={`subunit-name ${active ? "active" : ""}`}
           href={baseUrl}
           onFocus={() => trackHeaderInternalLink({ text: title })}
           title={`${title} home page`}
         >
-          {title}
+          {renderTrademark(title)}
         </a>
       </TitleWrapper>
     );
   }
+
   return (
     <TitleWrapper
       // @ts-ignore
@@ -71,7 +95,7 @@ const Title = () => {
         onFocus={() => trackHeaderInternalLink({ text: title })}
         title={`${title} home page`}
       >
-        {title}
+        {renderTrademark(title)}
       </a>
     </TitleWrapper>
   );
