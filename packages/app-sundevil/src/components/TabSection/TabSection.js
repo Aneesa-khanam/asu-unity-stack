@@ -343,7 +343,7 @@ export const TabSection = ({
 
                     {/* CTA Buttons */}
                     {activeTabData.tabContentCta?.length > 0 && (
-                      <div className="cta-wrapper mb-3">
+                      <div className="cta-wrapper mb-3 d-flex flex-lg-row flex-md-row flex-column gap-3">
                         {activeTabData.tabContentCta.map((cta, index) => (
                           <a
                             key={index}

@@ -45,14 +45,14 @@
   background-color: white;
   color: #191919;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .tabs-section .nav-tabs li {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
   color: white;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .tabs-section .nav-tabs li:focus,
@@ -60,7 +60,7 @@
   background: rgba(255, 255, 255, 0.20);
   color: white;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 @media (max-width:1260px) {
@@ -265,12 +265,6 @@
   justify-self: stretch;
 }
 
-/* .tabs-section {
-  background-position: center, top center, center calc(100% - 304px);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: cover, contain, contain;
-} */
-
 .dropdown-trigger {
   min-width: min(100%, 260px);
   padding: 0.5rem 1.5rem;
@@ -360,8 +354,6 @@
   margin-right: 8px;
 }
 
-@media (max-width:767px) {
-  /* .tabs-section {
-    background-size: unset !important;
-  } */
+.tabs-section .body-section .mobile-comparison-section .cta-wrapper .cta-button.btn-maroon {
+  color: #ffffff !important;
 }
