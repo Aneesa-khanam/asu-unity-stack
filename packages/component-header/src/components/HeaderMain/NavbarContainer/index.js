@@ -92,7 +92,7 @@ const NavbarContainer = forwardRef(
                   ))}
                 </form>
               )}
-              <LogoSponsor />
+              {/* <LogoSponsor /> */}
             </div>
           </div>
         )}

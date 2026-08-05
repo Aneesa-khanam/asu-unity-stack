@@ -14,6 +14,24 @@ const Wrapper = styled.div`
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      .links-container{
+          display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+      a{
+      color: rgb(25, 25, 25);
+    font-size: 0.75rem;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    &:hover{
+    text-decoration: underline;
+    }
+    }
+    }
       .${CLASS_NAMES.LINKS_CONTAINER} {
         display: flex;
         align-items: center;
@@ -27,7 +45,6 @@ const Wrapper = styled.div`
           text-decoration: none;
           display: flex;
           align-items: center;
-
           &:hover {
             text-decoration: underline;
           }
@@ -65,6 +82,7 @@ const Wrapper = styled.div`
         flex-flow: wrap;
         justify-items: start;
         width: 100%;
+        gap:0rem;
         a{
         min-width: 50%;
         flex: 1 0 0%;
