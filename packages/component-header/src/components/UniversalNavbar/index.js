@@ -78,7 +78,7 @@ const UniversalNavbar = () => {
       <div className="container-xl">
         <div className={CLASS_NAMES.HEADER_TOP}>
           <nav className="nav" aria-label="ASU Global">
-            <div className={CLASS_NAMES.LINKS_CONTAINER}>
+            <div className="links-container">
               {universalNavLinks.map(link => (
                 <a
                   key={link.href}
