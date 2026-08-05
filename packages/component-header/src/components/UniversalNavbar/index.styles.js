@@ -60,15 +60,34 @@ const Wrapper = styled.div`
         justify-content: flex-start;
         align-items: center;
         flex-direction: column-reverse;
+        .links-container{
+        display: flex;
+        flex-flow: wrap;
+        justify-items: start;
+        width: 100%;
+        a{
+        min-width: 50%;
+        flex: 1 0 0%;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 100%;
+        white-space: normal;
+        color: rgb(25, 25, 25);
+        margin: 0px;
+        text-align: center;
+        font-size: 0.875rem;
+        padding: 1rem 1.5rem;
+        border-top: 1px solid rgb(208, 208, 208);
+        -webkit-box-pack: center;
+        justify-content: center;
+        }
+        a:nth-child(2n){
+                border-left: 1px solid rgb(208, 208, 208);
+        }
+        }
         .${CLASS_NAMES.LINKS_CONTAINER} {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-auto-flow: row;
-          justify-items: start;
-          width: 100%;
-          gap: 0;
-          border-top: 1px solid ${ASU_GRAY5};
-          border-left: 1px solid ${ASU_GRAY5};
+
           .${CLASS_NAMES.NAV_LINK} {
             white-space: normal;
             margin-right: 0;
@@ -93,8 +112,8 @@ const Wrapper = styled.div`
   }
 
   @media screen and (orientation: landscape) and (max-width: ${({
-      breakpoint,
-    }) => breakpoint}) {
+  breakpoint,
+}) => breakpoint}) {
     .${CLASS_NAMES.HEADER_TOP} .nav .${CLASS_NAMES.LINKS_CONTAINER} {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
