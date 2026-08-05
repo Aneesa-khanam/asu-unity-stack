@@ -8,6 +8,7 @@ import { useAppContext } from "../../../core/context/app-context";
 import { useIsMobile } from "../../../core/hooks/isMobile";
 import { Button } from "../../Button";
 import { LogoButton } from "../../LogoButton";
+import { Search } from "../../UniversalNavbar/Search";
 import { UniversalNavbar } from "../../UniversalNavbar";
 import { LogoSponsor } from "../LogoSponsor";
 import { Wrapper } from "./index.styles";
@@ -65,6 +66,7 @@ const NavbarContainer = forwardRef(
         universalNavbar={universalNavbar}
         mobile={mobile}
       >
+      {isMobile && <Search />}
         {isMobile && typeof mobile?.drawer?.renderStart === "function"
           ? mobile.drawer.renderStart()
           : null}
