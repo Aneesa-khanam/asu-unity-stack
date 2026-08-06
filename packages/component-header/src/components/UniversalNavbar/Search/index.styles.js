@@ -74,12 +74,19 @@ const SearchWrapper = styled.form`
   }
   @media (max-width: ${({ breakpoint }) => breakpoint}) {
     width: 100%;
-    padding: 0 1rem 1rem;
+    padding: 1rem 1rem 1rem;
     label {
       position: relative;
       font-size: 0.875rem;
       margin-bottom: 0;
       width: 100%;
+      input{
+      width: 100%;
+        margin: 0;
+        padding: 0.5rem 3rem 0.5rem 2.25rem;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
       svg.${CLASS_NAMES.SEARCH_ICON} {
         position: absolute;
         top: 50%;
