@@ -3,6 +3,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import React from "react";
+import mobileMenuSearchIcon from "../../../assets/img/menu-search-icon.png?inline";
 
 import { useAppContext } from "../../../core/context/app-context";
 
@@ -17,11 +18,16 @@ export const HamburgerButton = ({ open, onClick, hidden }) => {
     typeof mobile?.hamburger?.renderOpen === "function" ? (
       mobile.hamburger.renderOpen()
     ) : (
-      <FontAwesomeIcon
-        icon={faBars}
-        // @ts-ignore
-        alt=" "
-      />
+      // <FontAwesomeIcon
+      //   icon={faBars}
+      //   // @ts-ignore
+      //   alt=" "
+      // />
+         <img
+                  src={mobileMenuSearchIcon}
+                  alt="Menu and Search Icon"
+                 className="uds-hdr-menu-search-icon"
+                />
     );
 
   const closeIcon =

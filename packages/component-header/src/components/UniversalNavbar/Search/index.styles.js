@@ -17,6 +17,17 @@ const SearchWrapper = styled.form`
     background: transparent;
     cursor: pointer;
   }
+  input{
+  height:32px;
+  &::placeholder {
+      font-size: 0.75rem;
+      line-height: 1;
+    }
+    &:focus,
+    &:focus-visible {
+      border: 1px solid ${ASU_GRAY1};
+    }
+  }
   .${CLASS_NAMES.SEARCH_BUTTON} {
     transition: cubic-bezier(0.19, 1, 0.19, 1);
     font-size: 0.75rem;
@@ -57,6 +68,18 @@ const SearchWrapper = styled.form`
   }
   .${CLASS_NAMES.SUBMIT_BUTTON} {
     margin-left: 0.5rem;
+    justify-content: center;
+    border-radius: 400rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: 0.03s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 70px;
+    display: flex;
+    height: 30px;
   }
   .${CLASS_NAMES.CLOSE_SEARCH} {
     background-color: ${ASU_WHITE};

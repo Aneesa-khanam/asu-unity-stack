@@ -94,8 +94,14 @@ const HeaderMainWrapper = styled.div`
       border: 0;
       border-radius: 50%;
       font-size: 1.25rem;
-      margin-left: 1rem;
+      margin-left: 0.5rem;
       padding: 0.3rem 8px 0.3rem 8px;
+      .uds-hdr-menu-search-icon{
+        width: 24px;
+        height: auto;
+        display: unset;
+      }
+
       &.collapsed {
         border-radius: 0;
       }
