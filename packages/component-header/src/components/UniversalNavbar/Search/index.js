@@ -127,7 +127,7 @@ console.log("✅ Search component mounted");
             {!open && (
               <button
                 type="button"
-                aria-label="Search asu.edu"
+                aria-label="Search sundevils.com"
                 onClick={handleChangeVisibility}
                 className={CLASS_NAMES.SEARCH_BUTTON}
                 data-testid="search-button"
