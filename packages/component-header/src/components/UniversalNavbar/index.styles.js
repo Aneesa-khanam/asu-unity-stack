@@ -14,11 +14,17 @@ const Wrapper = styled.div`
       display: flex;
       justify-content: flex-end;
       align-items: center;
+       search{
+      form.uds-hdr-open-search{
+      margin-left:1rem;
+      }
+      }
       .links-container{
           display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+
       a{
       color: rgb(25, 25, 25);
     font-size: 0.75rem;
