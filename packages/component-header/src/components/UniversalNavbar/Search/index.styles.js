@@ -109,6 +109,7 @@ const SearchWrapper = styled.form`
         padding: 0.5rem 3rem 0.5rem 2.25rem;
         font-size: 1rem;
         line-height: 1.5;
+        height:auto;
       }
       svg.${CLASS_NAMES.SEARCH_ICON} {
         position: absolute;
