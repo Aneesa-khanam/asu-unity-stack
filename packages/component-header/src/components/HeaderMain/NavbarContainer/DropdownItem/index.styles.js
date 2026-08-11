@@ -67,10 +67,10 @@ const DropdownWrapper = styled.div`
           margin: 0.75rem 0;
           position: relative;
           line-height: 1rem;
-          color: #191919;
+          color: #191919 !important;
           &:hover {
-            color: #8c1d40;
-            text-decoration: underline;
+            color: #8c1d40 !important;
+            text-decoration: underline !important;
           }
         }
         & + .nav-button {
@@ -84,11 +84,11 @@ const DropdownWrapper = styled.div`
 
       .nav-link-variant-muted {
         a {
-          color: #747474;
-          text-decoration: underline;
+          color: #747474 !important;
+          text-decoration: underline !important;
           font-size: 0.9rem;
           &:hover {
-            color: #191919;
+            color: #191919 !important;
           }
         }
       }

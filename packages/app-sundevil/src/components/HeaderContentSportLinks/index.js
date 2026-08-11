@@ -58,7 +58,7 @@ const SportLinkItemLink = styled.a`
   text-decoration: underline !important;
   font-size: var(--font-size-small);
   &:hover {
-    color: #8C1D40;
+    color: #8C1D40 !important;
   }
 `;
 
