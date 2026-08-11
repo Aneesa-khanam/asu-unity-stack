@@ -54,11 +54,11 @@ const sportPropTypes = PropTypes.shape({
  */
 
 const SportLinkItemLink = styled.a`
-  color: var(--text-color-muted);
+  color: #747474 !important;
   text-decoration: underline !important;
   font-size: var(--font-size-small);
   &:hover {
-    color: var(--text-color-brand);
+    color: #8C1D40;
   }
 `;
 
@@ -80,6 +80,7 @@ const SportLinkItem = ({ sportLinkItem, onClick }) => {
         href={sportLinkItem.url}
         // @ts-ignore
         onClick={onClick}
+        className="sport-link-item-link"
       >
         {sportLinkItem.label}
       </SportLinkItemLink>
@@ -140,9 +141,9 @@ const SportGridListItemRoot = styled.div`
   justify-content: start;
   gap: 2px;
   ${({
-    // @ts-ignore
-    borderBottom,
-  }) =>
+  // @ts-ignore
+  borderBottom,
+}) =>
     borderBottom
       ? `
       border-bottom: 1px solid var(--divider-color);
