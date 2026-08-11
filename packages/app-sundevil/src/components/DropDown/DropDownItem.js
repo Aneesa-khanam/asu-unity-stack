@@ -41,7 +41,7 @@ const Root = styled.button`
   }
   &.active {
     background-color: #191919;
-    color: #fafafa;
+    color: #fafafa !important;
   }
   text-overflow: ellipsis;
   white-space: nowrap;
