@@ -10,9 +10,9 @@ import { Button } from "../../Button";
 import { LogoButton } from "../../LogoButton";
 import { Search } from "../../UniversalNavbar/Search";
 import { UniversalNavbar } from "../../UniversalNavbar";
-import { LogoSponsor } from "../LogoSponsor";
 import { Wrapper } from "./index.styles";
 import { NavItem } from "./NavItem";
+import { LogoSponsor } from "../LogoSponsor";
 
 /**
  * @type {React.FC<{navBarHeight: number; hidden?: boolean, toggleMobileMenu: () => void}>}
@@ -94,7 +94,7 @@ const NavbarContainer = forwardRef(
                   ))}
                 </form>
               )}
-              {/* <LogoSponsor /> */}
+              <LogoSponsor />
             </div>
           </div>
         )}
