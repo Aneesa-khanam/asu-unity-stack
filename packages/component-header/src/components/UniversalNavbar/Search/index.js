@@ -36,7 +36,7 @@ function formatQueryParamValue(format, str) {
 }
 
 const Search = () => {
-console.log("✅ Search component mounted");
+// console.log("✅ Search component mounted");
   const {
     universalNavbar,
     breakpoint,
@@ -52,18 +52,18 @@ console.log("✅ Search component mounted");
   const [hasInputValue, setHasInputValue] = useState(false);
   // const formRef = useRef(null);
 
-  console.log("Search state:", {
-    breakpoint,
-    isMobile,
-    searchUrl,
-    site,
-  });
+  // console.log("Search state:", {
+  //   breakpoint,
+  //   isMobile,
+  //   searchUrl,
+  //   site,
+  // });
 
   useEffect(() => {
-   console.log("Search useEffect", {
-      open,
-      isMobile,
-    });
+  //  console.log("Search useEffect", {
+  //     open,
+  //     isMobile,
+  //   });
     if (open && typeof inputRef?.current?.focus === "function") {
       inputRef.current.focus();
     }
