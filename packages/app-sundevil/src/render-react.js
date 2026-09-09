@@ -1,7 +1,8 @@
 /* eslint-disable no-param-reassign */
 // @ts-check
 import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
+
+import { getReactRoot } from "../../../shared/utils/react-root";
 
 /**
  * @description
@@ -164,7 +165,7 @@ export const RenderReact = ({
     }
 
     const renderComponent = targetElement => {
-      ReactDOM.render(
+      getReactRoot(targetElement).render(
         <Suspense
           fallback={
             <div style={loadingStyle} aria-busy="true">
@@ -173,8 +174,7 @@ export const RenderReact = ({
           }
         >
           {React.createElement(component, props)}
-        </Suspense>,
-        targetElement
+        </Suspense>
       );
     };
 

@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
-import ReactDOM from "react-dom";
 
+import { getReactRoot } from "../../../../../shared/utils/react-root";
 import { Accordion } from "../../components/Accordion";
 import { AccordionV2 } from "../../components/AccordionV2";
 import { AnchorMenu } from "../../components/AnchorMenu";
@@ -29,7 +29,7 @@ import { Video } from "../../components/Video";
  * @param {ComponentProps} props
  */
 const RenderReact = (component, props, target) => {
-  ReactDOM.render(React.createElement(component, props), target);
+  getReactRoot(target).render(React.createElement(component, props));
 };
 
 /**

@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
-import ReactDOM from "react-dom";
 
+import { getReactRoot } from "../../../../../shared/utils/react-root";
 import { AsuRfi } from "../../components/AsuRfi";
 
 /**
@@ -15,7 +15,7 @@ import { AsuRfi } from "../../components/AsuRfi";
  * @param {ComponentProps} props
  */
 const RenderReact = (component, props, target) => {
-  ReactDOM.render(React.createElement(component, props), target);
+  getReactRoot(target).render(React.createElement(component, props));
 };
 
 /**

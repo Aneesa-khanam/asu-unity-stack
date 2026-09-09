@@ -57,7 +57,8 @@
     "@storybook/react": "^7.6.14",
     "@storybook/react-webpack5": "^7.6.14",
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.2",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.0",
@@ -71,11 +72,11 @@
     "jest-transform-file": "^1.1.1",
     "jsdom-screenshot": "^4.0.0",
     "postcss": "^8.4.19",
-    "react": ">= 16.14.0 < 18",
-    "react-dom": ">= 16.14.0 < 18",
+    "react": ">= 19.0.0 < 20",
+    "react-dom": ">= 19.0.0 < 20",
     "react-router-dom": "^6.2.1",
-    "react-share": "^4.4.0",
-    "reactstrap": "^8.9.0",
+    "react-share": "^5.2.2",
+    "reactstrap": "^9.2.3",
     "semantic-release": "^17.4.2",
     "semantic-release-monorepo": "^7.0.4",
     "storybook": "^7.6.14",
@@ -88,14 +89,14 @@
     "date-fns": "^2.19.0",
     "phone-fns": "^3.2.3",
     "prop-types": "^15.7.2",
-    "styled-components": "^5.3.0"
+    "styled-components": "^6.1.19"
   },
   "peerDependencies": {
-    "react": ">= 16.14.0 < 18",
-    "react-dom": ">= 16.14.0 < 18",
+    "react": ">= 19.0.0 < 20",
+    "react-dom": ">= 19.0.0 < 20",
     "react-router-dom": ">= 5.2.0 < 7",
-    "react-share": "^4.4.0",
-    "reactstrap": "^8.9.0"
+    "react-share": "^5.2.2",
+    "reactstrap": "^9.2.3"
   },
   "exports": {
     "./*": "./*",

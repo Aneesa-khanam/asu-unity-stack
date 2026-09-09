@@ -32,15 +32,15 @@ const AsuRfi = props => {
     studentType,
     areaOfInterest,
     programOfInterest,
-    programOfInterestOptional,
-    isCertMinor,
+    programOfInterestOptional = false,
+    isCertMinor = false,
     country,
     stateProvince,
-    successMsg,
-    test,
-    dataSourceDegreeSearch,
-    dataSourceAsuOnline,
-    dataSourceCountriesStates,
+    successMsg = `Keep an eye on your inbox and in the meantime, check out some more of the <a href="https://www.asu.edu/about">amazing facts, figures, or other links</a> that ASU has to offer.`,
+    test = false,
+    dataSourceDegreeSearch = DATA_SOURCE.DEGREE_SEARCH,
+    dataSourceAsuOnline = DATA_SOURCE.ASU_ONLINE,
+    dataSourceCountriesStates = DATA_SOURCE.COUNTRIES_STATES,
     submissionUrl,
   } = props;
 
@@ -94,25 +94,6 @@ const AsuRfi = props => {
 export { AsuRfi };
 
 // Props
-AsuRfi.defaultProps = {
-  campus: undefined,
-  actualCampus: undefined,
-  college: undefined,
-  department: undefined,
-  studentType: undefined,
-  areaOfInterest: undefined,
-  programOfInterest: undefined,
-  programOfInterestOptional: false,
-  isCertMinor: false,
-  country: undefined,
-  stateProvince: undefined,
-  successMsg: `Keep an eye on your inbox and in the meantime, check out some more of the <a href="https://www.asu.edu/about">amazing facts, figures, or other links</a> that ASU has to offer.`,
-  test: false,
-  dataSourceDegreeSearch: DATA_SOURCE.DEGREE_SEARCH,
-  dataSourceAsuOnline: DATA_SOURCE.ASU_ONLINE,
-  dataSourceCountriesStates: DATA_SOURCE.COUNTRIES_STATES,
-};
-
 AsuRfi.propTypes = {
   appPathFolder: PropTypes.string,
   campus: PropTypes.oneOf(["GROUND", "ONLNE", "NOPREF"]),

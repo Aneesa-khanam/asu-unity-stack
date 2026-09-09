@@ -68,6 +68,7 @@ const esModuleConfig = merge(common, {
     // these needs to be low-case spelled
     "react": "react",
     "react-dom": "react-dom",
+    "react-dom/client": "react-dom/client",
   },
 });
 

@@ -32,21 +32,11 @@ const RfiError = ({ isError, metaError }) => (
 // duplicate the setting in our props got displaying the required icon until
 // Formik has a better way to do it.
 
-RfiLabel.defaultProps = {
-  id: undefined,
-  requiredIcon: undefined,
-};
-
 RfiLabel.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string,
   requiredIcon: PropTypes.bool,
-};
-
-RfiError.defaultProps = {
-  isError: undefined,
-  metaError: undefined,
 };
 
 RfiError.propTypes = {

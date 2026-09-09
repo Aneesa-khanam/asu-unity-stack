@@ -41,11 +41,6 @@ const RfiCheckboxSingle = ({
   );
 };
 
-RfiCheckboxSingle.defaultProps = {
-  requiredIcon: undefined,
-  required: undefined,
-};
-
 RfiCheckboxSingle.propTypes = {
   children: PropTypes.node.isRequired,
   onBlur: PropTypes.func,

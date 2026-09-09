@@ -69,14 +69,6 @@ const RfiTextInput = ({
 // duplicate the setting in our props got displaying the required icon until
 // Formik has a better way to do it.
 
-RfiTextInput.defaultProps = {
-  id: undefined,
-  requiredIcon: undefined,
-  required: undefined,
-  autoFocus: undefined,
-  helperText: undefined,
-};
-
 RfiTextInput.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

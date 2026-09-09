@@ -16,7 +16,7 @@ const config = {
   ],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {}
+    options: { legacyRootApi: false }
   },
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

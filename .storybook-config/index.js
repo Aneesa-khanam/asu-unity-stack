@@ -20,6 +20,19 @@ module.exports = {
   config: function config(entry = []) {
     return [...entry, require.resolve('./preset/preview.js')];
   },
+  /**
+   * Storybook 7 only aliases the React 18 root API when react-dom is 18.x.
+   * React 19 removed ReactDOM.render / unmountComponentAtNode, so force the
+   * createRoot shim for every package that loads this shared preset.
+   */
+  webpackFinal: async config => {
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@storybook/react-dom-shim": "@storybook/react-dom-shim/dist/react-18",
+    };
+    return config;
+  },
   managerEntries: function managerEntries(entry = []) {
     return [...entry, require.resolve('./preset/manager.js')];
   },

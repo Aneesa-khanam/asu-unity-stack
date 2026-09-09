@@ -14,7 +14,7 @@ const config = {
   ],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {}
+    options: { legacyRootApi: false }
   },
   webpackFinal: config => {
     return {
@@ -23,7 +23,9 @@ const config = {
         ...config.resolve,
         extensions: [".js", ".jsx"],
         alias: {
+          ...((config.resolve && config.resolve.alias) || {}),
           ...common.resolve.alias,
+          "@storybook/react-dom-shim": "@storybook/react-dom-shim/dist/react-18",
           Components: path.resolve(PROJECT_DIR, "src/components/"),
         },
       },

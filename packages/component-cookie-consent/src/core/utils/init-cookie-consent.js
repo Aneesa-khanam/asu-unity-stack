@@ -1,7 +1,7 @@
 // @ts-check
 import React from "react";
-import ReactDOM from "react-dom";
 
+import { getReactRoot } from "../../../../../shared/utils/react-root";
 import { CookieConsent } from "../../CookieConsent";
 
 /**
@@ -14,7 +14,7 @@ import { CookieConsent } from "../../CookieConsent";
  */
 
 const RenderReact = (component, props, target) => {
-  ReactDOM.render(React.createElement(component, props), target);
+  getReactRoot(target).render(React.createElement(component, props));
 };
 
 /**

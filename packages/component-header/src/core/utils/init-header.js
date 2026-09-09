@@ -1,7 +1,7 @@
 // @ts-check
 import React from "react";
-import ReactDOM from "react-dom";
 
+import { getReactRoot } from "../../../../../shared/utils/react-root";
 import { ASUHeader } from "../../header";
 
 /**
@@ -14,7 +14,7 @@ import { ASUHeader } from "../../header";
  */
 
 const RenderReact = (component, props, target) => {
-  ReactDOM.render(React.createElement(component, props), target);
+  getReactRoot(target).render(React.createElement(component, props));
 };
 
 /**

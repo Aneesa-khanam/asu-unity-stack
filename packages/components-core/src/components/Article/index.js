@@ -27,7 +27,7 @@ import { Wrapper, EventInfoWrapper } from "./index.styles";
  * @returns {JSX.Element}
  */
 export const Article = ({
-  type,
+  type = "news",
   articleUrl,
   publicationDate,
   title,
@@ -373,18 +373,4 @@ Article.propTypes = {
    * URL for a Zoom button
    */
   zoomUrl: PropTypes.string,
-};
-
-Article.defaultProps = {
-  type: "news",
-  authorEmail: undefined,
-  authorPhone: undefined,
-  authorTitle: undefined,
-  breadcrumbs: undefined,
-  calendarUrl: undefined,
-  headerImageUrl: undefined,
-  eventLocation: undefined,
-  eventTime: undefined,
-  registrationUrl: undefined,
-  zoomUrl: undefined,
 };

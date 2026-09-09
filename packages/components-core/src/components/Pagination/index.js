@@ -25,8 +25,8 @@ const defaultGAEvent = {
 export const Pagination = ({
   type,
   background,
-  currentPage,
-  totalPages,
+  currentPage = 1,
+  totalPages = 10,
   onChange,
 }) => {
   const [selectedPage, setSelectedPage] = useState(null);
@@ -178,9 +178,4 @@ Pagination.propTypes = {
    * Callback fired when the page is changed.
    */
   onChange: PropTypes.func.isRequired,
-};
-
-Pagination.defaultProps = {
-  currentPage: 1,
-  totalPages: 10,
 };

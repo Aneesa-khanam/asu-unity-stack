@@ -22,6 +22,7 @@ const umdConfig = merge(common, {
   externals: {
     "react": "React",
     "react-dom": "ReactDOM",
+    "react-dom/client": "ReactDOM",
   },
 });
 
@@ -40,6 +41,7 @@ const cjsConfig = merge(common, {
   externals: {
     "react": "React",
     "react-dom": "ReactDOM",
+    "react-dom/client": "ReactDOM",
   },
 });
 
@@ -64,6 +66,7 @@ const esModuleConfig = merge(common, {
     // these needs to be low-case spelled
     "react": "react",
     "react-dom": "react-dom",
+    "react-dom/client": "react-dom/client",
   },
 });
 

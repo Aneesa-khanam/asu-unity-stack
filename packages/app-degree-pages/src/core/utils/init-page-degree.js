@@ -1,8 +1,8 @@
 /* eslint-disable quote-props */
 // @ts-check
 import React from "react";
-import ReactDOM from "react-dom";
 
+import { getReactRoot } from "../../../../../shared/utils/react-root";
 import { ListingPage, DetailPage } from "../../components";
 
 /**
@@ -17,7 +17,7 @@ import { ListingPage, DetailPage } from "../../components";
  */
 const RenderReact = (component, props, targetSelector) => {
   const target = document.querySelector(targetSelector);
-  ReactDOM.render(React.createElement(component, props), target);
+  getReactRoot(target).render(React.createElement(component, props));
 };
 
 /**

@@ -30,7 +30,7 @@ const now = new Date();
  * @param {CookieConsentProps} props
  * @returns {JSX.Element}
  */
-const CookieConsent = ({ enableCookieConsent, expirationTime }) => {
+const CookieConsent = ({ enableCookieConsent, expirationTime = 90 }) => {
   const cookieConsentRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -128,8 +128,5 @@ CookieConsent.propTypes = {
   expirationTime: PropTypes.number,
 };
 
-CookieConsent.defaultProps = {
-  expirationTime: 90,
-};
-
 export { CookieConsent };
+

@@ -45,13 +45,6 @@ const RfiEmailInput = ({
   </Field>
 );
 
-RfiEmailInput.defaultProps = {
-  id: undefined,
-  requiredIcon: undefined,
-  required: undefined,
-  autoFocus: undefined,
-};
-
 RfiEmailInput.propTypes = {
   id: PropTypes.string,
   label: PropTypes.string.isRequired,

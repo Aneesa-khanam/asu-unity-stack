@@ -14,7 +14,7 @@ const RfiTextArea = ({
   requiredIcon,
   required,
   autoFocus,
-  disabled,
+  disabled = false,
   helperText,
   onBlur,
 }) => (
@@ -51,15 +51,6 @@ const RfiTextArea = ({
 // Note on requiredIcon. Yup required status is not readily available so we
 // duplicate the setting in our props got displaying the required icon until
 // Formik has a better way to do it.
-
-RfiTextArea.defaultProps = {
-  id: undefined,
-  requiredIcon: undefined,
-  required: undefined,
-  autoFocus: undefined,
-  disabled: false,
-  helperText: undefined,
-};
 
 RfiTextArea.propTypes = {
   label: PropTypes.string.isRequired,

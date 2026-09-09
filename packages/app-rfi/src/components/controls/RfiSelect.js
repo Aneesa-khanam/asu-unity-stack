@@ -17,7 +17,7 @@ const RfiSelect = ({
   requiredIcon,
   required,
   options,
-  disabled,
+  disabled = false,
   autoFocus,
   onBlur,
 }) => {
@@ -64,14 +64,6 @@ const RfiSelect = ({
 // Note on requiredIcon. Yup required status is not readily available so we
 // duplicate the setting in our props for displaying the required icon until
 // Formik has a better way to do it.
-
-RfiSelect.defaultProps = {
-  id: undefined,
-  requiredIcon: undefined,
-  required: undefined,
-  autoFocus: undefined,
-  disabled: false,
-};
 
 RfiSelect.propTypes = {
   id: PropTypes.string,

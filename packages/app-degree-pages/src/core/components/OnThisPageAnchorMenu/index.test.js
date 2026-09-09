@@ -30,15 +30,14 @@ describe("#OnThisPageAnchorMenu", () => {
 
     const component = render(<OnThisPageAnchorMenu anchorMenu={anchorMenu} />);
     expect(component).toBeDefined();
-    expect(AnchorMenu).toHaveBeenCalledWith(
+    expect(AnchorMenu.mock.calls[0][0]).toEqual(
       expect.objectContaining({
         items: expect.arrayContaining(items),
         firstElementId: expect.stringContaining(
           progDetailSectionIds.affordingCollege.targetIdName
         ),
         focusFirstFocusableElement: false,
-      }),
-      expect.anything()
+      })
     );
   });
 });

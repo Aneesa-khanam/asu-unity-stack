@@ -76,13 +76,6 @@ const RfiPhone = ({
 // duplicate the setting in our props got displaying the required icon until
 // Formik has a better way to do it.
 
-RfiPhone.defaultProps = {
-  id: undefined,
-  requiredIcon: undefined,
-  required: undefined,
-  helperText: undefined,
-};
-
 RfiPhone.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

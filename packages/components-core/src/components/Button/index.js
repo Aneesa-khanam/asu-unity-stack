@@ -25,20 +25,20 @@ const GA_DEFAULT_OBJECT = {
  * @returns {JSX.Element}
  */
 export const Button = ({
-  label,
-  cardTitle,
+  label = "",
+  cardTitle = "",
   ariaLabel,
   block,
-  color,
+  color = "gray",
   disabled,
-  element,
+  element = "button",
   href,
   icon,
   innerRef,
   onClick,
-  size,
+  size = "default",
   classes,
-  target,
+  target = "_self",
   renderIcon,
   renderEndIcon,
   trackingOverrides,
@@ -181,21 +181,4 @@ Button.propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   trackingOverrides: PropTypes.object,
-};
-
-Button.defaultProps = {
-  label: "",
-  cardTitle: "",
-  ariaLabel: undefined,
-  block: undefined,
-  color: "gray",
-  disabled: undefined,
-  element: "button",
-  href: undefined,
-  icon: undefined,
-  innerRef: undefined,
-  onClick: undefined,
-  size: "default",
-  classes: undefined,
-  target: "_self",
 };
