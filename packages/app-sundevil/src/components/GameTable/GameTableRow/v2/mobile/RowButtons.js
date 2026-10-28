@@ -39,7 +39,7 @@ export const RowButtons = props => {
           ...button,
           color: stringToColor(button.color),
           target: stringToTarget(configCells?.cellTicketButton?.button?.target),
-          size: "xsmall",
+          size: stringToSize(configCells?.cellTicketButton?.button?.size),
           icon: [],
           label: button.label,
           onClick: button.onClick,
